@@ -3,11 +3,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-
+import { Link } from 'react-router-dom';
 import './Navbar.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-
+import { faCartShopping, faMagnifyingGlass, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import Collapse from 'react-bootstrap/Collapse';
 const NavbarComponent = () => {
 
     return (
@@ -29,22 +29,88 @@ const NavbarComponent = () => {
                             </Offcanvas.Title>
                         </Offcanvas.Header>
                         <Offcanvas.Body>
-                            <Nav className="justify-content-end flex-grow-1 pe-3">
-                                <Nav.Link href="#action1">Home</Nav.Link>
-                                <Nav.Link href="#action2">Link</Nav.Link>
-                                <NavDropdown
-                                    title="Dropdown"
+                            <Nav className="justify-content-end flex-grow-1">
+                                <NavDropdown className='dropdown-tg'
+                                    title={<div className=' d-flex justify-content-between '>
+                                        <p className='nav-text'>Destacados</p>
+                                        <FontAwesomeIcon icon={faChevronDown} />
+                                    </div>
+                                    }
                                     id={`offcanvasNavbarDropdown-expand-lg`}
                                 >
-                                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+
+                                    <NavDropdown.Item href="#action3">
+                                        Calzado
+                                    </NavDropdown.Item>
                                     <NavDropdown.Item href="#action4">
-                                        Another action
+                                        Indumentaria
                                     </NavDropdown.Item>
-                                    <NavDropdown.Divider />
                                     <NavDropdown.Item href="#action5">
-                                        Something else here
+                                        Ver Todo
                                     </NavDropdown.Item>
+
                                 </NavDropdown>
+                                <NavDropdown
+                                    title={<div className='d-flex justify-content-between'>
+                                        <p className='nav-text'>Mujer</p>
+                                        <FontAwesomeIcon icon={faChevronDown} />
+                                    </div>
+                                    }
+                                    id={`offcanvasNavbarDropdown-expand-lg`}
+                                >
+                                    <NavDropdown.Item href="#action3">
+                                        Calzado
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item href="#action4">
+                                        Indumentaria
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item href="#action5">
+                                        Ver Todo
+                                    </NavDropdown.Item>
+
+                                </NavDropdown>
+                                <NavDropdown
+                                    title={<div className='d-flex justify-content-between'>
+                                        <p className='nav-text'>Hombre</p>
+                                        <FontAwesomeIcon icon={faChevronDown} />
+                                    </div>
+                                    }
+                                    id={`offcanvasNavbarDropdown-expand-lg`}
+                                >
+                                    <NavDropdown.Item href="#action3">
+                                        Calzado
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item href="#action4">
+                                        Indumentaria
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item href="#action5">
+                                        Ver Todo
+                                    </NavDropdown.Item>
+
+                                </NavDropdown>
+                                <NavDropdown
+                                    title={<div className='d-flex justify-content-between'>
+                                        <p className='nav-text'>Niño/a</p>
+                                        <FontAwesomeIcon icon={faChevronDown} />
+                                    </div>
+                                    }
+                                    id={`offcanvasNavbarDropdown-expand-lg`}
+                                >
+                                    <NavDropdown.Item href="#action3">
+                                        Calzado
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item href="#action4">
+                                        Indumentaria
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item href="#action5">
+                                        Ver Todo
+                                    </NavDropdown.Item>
+
+                                </NavDropdown>
+                                <Nav.Link href="#action1">Accesorios</Nav.Link>
+                                <Nav.Link href="#action2">Mi Cuenta</Nav.Link>
+                                <Nav.Link href="#action2">Salir</Nav.Link>
+
                             </Nav>
 
                         </Offcanvas.Body>
@@ -59,8 +125,12 @@ const NavbarComponent = () => {
                 />
             </Navbar.Brand>
             <div className='icons-container'>
-                <FontAwesomeIcon className='nav-icon' icon={faCartShopping} />
-                <FontAwesomeIcon className='nav-icon' icon={faMagnifyingGlass} />
+                <Link>
+                    <FontAwesomeIcon className='nav-icon' icon={faCartShopping} />
+                </Link>
+                <Link>
+                    <FontAwesomeIcon className='nav-icon' icon={faMagnifyingGlass} />
+                </Link>
             </div>
 
         </div>

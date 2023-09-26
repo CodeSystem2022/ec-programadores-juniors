@@ -36,6 +36,7 @@
 
 .nav-icon {
     margin: 0 5px;
+    color: var(--black-color);
 }
 
 // desplegable 
@@ -46,4 +47,27 @@
 
 .off-title {
     width: 40%;
+}
+
+// .offcanvas .off-header .btn-close {
+//     color: var(--black-color) !important;
+// }
+
+.dropdown-tg {
+    transition: all 0.5s ease;
+    // width: 100%;
+}
+
+.dropdown-toggle:after {
+    display: none !important;
+}
+
+.dropdown-menu {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.nav-text {
+    margin: 0;
 }
