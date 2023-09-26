@@ -1,8 +1,49 @@
-h1 {
-    font-size: 18px;
-    background-color: aqua;
-    &:hover{
-        background-color: beige;
+@import '../../scss/extend.scss';
+
+// navbar
+
+.nav-container {
+    @extend %flex-between-center;
+    flex-direction: row;
+    border-bottom: 1px solid var(--light-grey);
+    width: 100%;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.navbar-toggler {
+    border: none;
+
+    &:focus {
+        box-shadow: none;
     }
-    
+}
+
+.navbar-brand {
+    width: 30%;
+}
+
+
+.img-logo {
+    width: 100%;
+}
+
+.icons-container {
+    margin-right: 15px;
+}
+
+.nav-icon {
+    margin: 0 5px;
+}
+
+// desplegable 
+
+.off-header {
+    padding: 10px;
+}
+
+.off-title {
+    width: 40%;
 }
