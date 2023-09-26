@@ -1,6 +1,8 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ejecuten npm i o npm install para instalar las dependencias y listo
+Hagan npm run dev y ya se puede trabajar
+Recuerde estar parados en la carpeta sport-blend
 
 Currently, two official plugins are available:
 
