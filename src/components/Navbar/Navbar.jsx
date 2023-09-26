@@ -1,3 +1,5 @@
+import './Navbar.scss'
+
 const NavbarComponent = () => {
     return(
         <>
