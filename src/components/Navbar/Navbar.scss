@@ -1,0 +1,73 @@
+@import '../../scss/extend.scss';
+
+// navbar
+
+.nav-container {
+    @extend %flex-between-center;
+    flex-direction: row;
+    border-bottom: 1px solid var(--light-grey);
+    width: 100%;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.navbar-toggler {
+    border: none;
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.navbar-brand {
+    width: 30%;
+}
+
+
+.img-logo {
+    width: 100%;
+}
+
+.icons-container {
+    margin-right: 15px;
+}
+
+.nav-icon {
+    margin: 0 5px;
+    color: var(--black-color);
+}
+
+// desplegable 
+
+.off-header {
+    padding: 10px;
+}
+
+.off-title {
+    width: 40%;
+}
+
+// .offcanvas .off-header .btn-close {
+//     color: var(--black-color) !important;
+// }
+
+.dropdown-tg {
+    transition: all 0.5s ease;
+    // width: 100%;
+}
+
+.dropdown-toggle:after {
+    display: none !important;
+}
+
+.dropdown-menu {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.nav-text {
+    margin: 0;
+}

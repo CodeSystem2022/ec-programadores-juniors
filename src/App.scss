@@ -1,0 +1,22 @@
+:root {
+    scroll-behavior: smooth;
+    overscroll-behavior: none;
+    --bg-color: #FFFCFF;
+    --white:#faf0f0;
+    --black-color: #111111;
+    --dark-color-shadow: rgba(0, 27, 46, 0.315);
+    --light-grey: #E9EAEC;
+    --sad-red: #93252A;
+    --dark-blue: #333652;
+
+    // hay que cambiar las fuentes aqui
+    --fuente-encabezados-test: 'Anton', sans-serif;
+    --fuente-principal: 'Arial', sans-serif;
+    --fuente-encabezados: 'Helvetica Neue', sans-serif;
+    --fuente-texto: 'Roboto', sans-serif;
+}
+
+
+body {
+    background-color: var(--bg-color);
+}

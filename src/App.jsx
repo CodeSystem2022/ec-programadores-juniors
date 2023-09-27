@@ -1,15 +1,14 @@
 
-import './App.css'
+import './App.scss'
 import { Route, Routes } from 'react-router-dom'
-import NavbarComponent from './components/Navbar'
+import Home from './containers/Home/Home'
 
 function App() {
 
   return (
     <>
         <Routes>
-          <Route path="/" element={<NavbarComponent />} />
-
+          <Route path="/" element={<Home />} />
         </Routes>
       
     </>
