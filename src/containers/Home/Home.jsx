@@ -1,13 +1,10 @@
-import FullWidthLayout from "../../layouts/FullWidthLayout"
+import FullWidthLayout from "../../layouts/FullWidthLayout";
 
 const Home = () => {
-    return (
-        <FullWidthLayout>
- 
-           
-        </FullWidthLayout>
+  return (
+    <FullWidthLayout>
+    </FullWidthLayout>
+  );
+};
 
-    )
-}
-
-export default Home
+export default Home;
