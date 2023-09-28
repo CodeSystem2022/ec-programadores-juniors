@@ -1,5 +1,5 @@
 
-import Footer from "../containers/Footer/Footer"
+import Footer from "../components/Footer/Footer"
 import Header from "../containers/Header/Header"
 
 
