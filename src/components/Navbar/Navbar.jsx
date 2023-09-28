@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import './Navbar.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faMagnifyingGlass, faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import Collapse from 'react-bootstrap/Collapse';
+
 const NavbarComponent = () => {
 
     return (
@@ -39,13 +39,13 @@ const NavbarComponent = () => {
                                     id={`offcanvasNavbarDropdown-expand-lg`}
                                 >
 
-                                    <NavDropdown.Item href="#action3">
+                                    <NavDropdown.Item className='navDropdown' href="#action3">
                                         Calzado
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item href="#action4">
+                                    <NavDropdown.Item className='navDropdown' href="#action4">
                                         Indumentaria
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item href="#action5">
+                                    <NavDropdown.Item className='view-all navDropdown' href="#action5">
                                         Ver Todo
                                     </NavDropdown.Item>
 
@@ -58,13 +58,13 @@ const NavbarComponent = () => {
                                     }
                                     id={`offcanvasNavbarDropdown-expand-lg`}
                                 >
-                                    <NavDropdown.Item href="#action3">
+                                    <NavDropdown.Item href="#action3" className='navDropdown'>
                                         Calzado
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item href="#action4">
+                                    <NavDropdown.Item href="#action4" className='navDropdown'>
                                         Indumentaria
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item href="#action5">
+                                    <NavDropdown.Item className='view-all navDropdown' href="#action5">
                                         Ver Todo
                                     </NavDropdown.Item>
 
@@ -77,13 +77,13 @@ const NavbarComponent = () => {
                                     }
                                     id={`offcanvasNavbarDropdown-expand-lg`}
                                 >
-                                    <NavDropdown.Item href="#action3">
+                                    <NavDropdown.Item className='navDropdown' href="#action3">
                                         Calzado
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item href="#action4">
+                                    <NavDropdown.Item className='navDropdown' href="#action4">
                                         Indumentaria
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item href="#action5">
+                                    <NavDropdown.Item className='view-all navDropdown' href="#action5">
                                         Ver Todo
                                     </NavDropdown.Item>
 
@@ -96,13 +96,13 @@ const NavbarComponent = () => {
                                     }
                                     id={`offcanvasNavbarDropdown-expand-lg`}
                                 >
-                                    <NavDropdown.Item href="#action3">
+                                    <NavDropdown.Item className='navDropdown' href="#action3">
                                         Calzado
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item href="#action4">
+                                    <NavDropdown.Item className='navDropdown' href="#action4">
                                         Indumentaria
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item href="#action5">
+                                    <NavDropdown.Item className='view-all navDropdown' href="#action5">
                                         Ver Todo
                                     </NavDropdown.Item>
 

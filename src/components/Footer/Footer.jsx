@@ -9,7 +9,7 @@ const Footer = () => {
         <div className='footer d-flex flex-column justify-content-start'>
             <div className='footer-menu d-flex flex-column'>
                 <Link to="/" className='footer-link'>AYUDA</Link>
-                <Link className='footer-link'>ACERDA DE SPORTBLEND</Link>
+                <Link className='footer-link'>ACERCA DE SPORTBLEND</Link>
             </div>
 
             <div className='footer-icons-cont d-flex justify-content-space-around'>

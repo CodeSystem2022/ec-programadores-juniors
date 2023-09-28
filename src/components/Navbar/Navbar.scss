@@ -71,3 +71,23 @@
 .nav-text {
     margin: 0;
 }
+
+.navDropdown {
+    animation: slide-down 0.3s ease-out;
+    /* Adjust the duration and easing as needed */
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.view-all {
+    font-size: 12px;
+    font-weight: bold;
+}
