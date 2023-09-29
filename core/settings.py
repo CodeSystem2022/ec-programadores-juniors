@@ -49,8 +49,10 @@ PROJECT_APPS=[
     ]
 
 THIRD_PARTY_APPS=[
-
+    "apps.user",
 ]
+
+
 INSTALLED_APPS= DJANGO_APPS + PROJECT_APPS + THIRD_PARTY_APPS
 
 
@@ -193,6 +195,8 @@ SIMPLE_JWT = {
 }
 
 # Djoser Auth Settings
+AUTH_USER_MODEL = "user.UserAccount"
+
 DJOSER = {
     'LOGIN_FIELD': 'email',
     'USER_CREATE_PASSWORD_RETYPE': True,
