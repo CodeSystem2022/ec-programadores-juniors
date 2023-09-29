@@ -1,4 +1,4 @@
-import "./App.scss";
+import "./assets/styles/App.scss";
 // Rutas
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Provider } from "react-redux";
