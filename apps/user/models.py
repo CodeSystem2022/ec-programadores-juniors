@@ -6,7 +6,7 @@ from django.contrib.auth.models import (
 )
 import uuid
 from django.utils import timezone
-from djoser.signals import user_registered
+#from djoser.signals import user_registered
 
 
 class UserAccountManager(BaseUserManager):
