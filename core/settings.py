@@ -38,7 +38,7 @@ DJANGO_APPS = [
     'django.contrib.staticfiles',
 ]
 
-PROJECT_APPS=[
+THIRD_PARTY_APPS=[
     'corsheaders',
 
     'rest_framework',
@@ -49,9 +49,10 @@ PROJECT_APPS=[
 
     'ckeditor',
     'ckeditor_uploader',
+   'drf_yasg',
     ]
 
-THIRD_PARTY_APPS=[
+PROJECT_APPS=[
     "apps.user",
 ]
 
@@ -87,7 +88,7 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'dist')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -136,7 +137,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'UTC'
 
@@ -157,7 +158,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'build/static')
+    os.path.join(BASE_DIR, 'dist/assets')
 ]
 
 # Default primary key field type
@@ -168,17 +169,17 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Cors Headers Settings
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000',
+    'http://localhost:8000',
     'http://localhost:5173',
     'http://127.0.0.1:5173',
-    'http://127.0.0.1:3000',
+    'http://127.0.0.1:8000',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:5173',
     'http://127.0.0.1:5173',
-    'http://localhost:3000',
-    'http://127.0.0.1:3000',
+    'http://localhost:8000',
+    'http://127.0.0.1:8000',
 ]
 
 # Django Rest Framework Settings
