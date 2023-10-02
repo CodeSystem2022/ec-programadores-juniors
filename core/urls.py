@@ -8,9 +8,6 @@ from django.conf.urls.static import static
 from django.views.generic import TemplateView
 
 # API List URLs
-from rest_framework import permissions
-from drf_yasg.views import get_schema_view
-from drf_yasg import openapi
 
 
 urlpatterns = [
@@ -20,3 +17,9 @@ urlpatterns = [
     path("auth/", include("djoser.urls.jwt")),
     path("auth/", include("djoser.social.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# Front
+urlpatterns += [re_path(r'^.*',
+                        TemplateView.as_view(template_name='index.html'))]
+
+
