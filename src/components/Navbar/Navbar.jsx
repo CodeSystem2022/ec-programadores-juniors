@@ -23,7 +23,7 @@ const NavbarComponent = () => {
                         <Offcanvas.Header className='off-header' closeButton>
                             <Offcanvas.Title className='off-title' id={`offcanvasNavbarLabel-expand-lg`}>
                                 <img className='img-logo'
-                                    src="./logo/Black Sport Blend.svg"
+                                    src="./logo/sportblend-logo.png"
                                     alt="logo"
                                 />
                             </Offcanvas.Title>
@@ -120,7 +120,7 @@ const NavbarComponent = () => {
 
             <Navbar.Brand className='navbar-brand' href="./">
                 <img className='img-logo'
-                    src="./logo/Black Sport Blend.svg"
+                    src="./logo/sportblend-logo.png"
                     alt="logo"
                 />
             </Navbar.Brand>
