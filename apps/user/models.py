@@ -6,7 +6,8 @@ from django.contrib.auth.models import (
 )
 import uuid
 from django.utils import timezone
-#from djoser.signals import user_registered
+
+# from djoser.signals import user_registered
 
 
 class UserAccountManager(BaseUserManager):
@@ -30,7 +31,7 @@ class UserAccountManager(BaseUserManager):
         user.save(using=self._db)
 
         return user
-    
+
 
 class UserAccount(AbstractBaseUser, PermissionsMixin):
     roles = (
@@ -86,7 +87,7 @@ class UserAccount(AbstractBaseUser, PermissionsMixin):
     REQUIRED_FIELDS = ["username"]
 
     def get_full_name(self):
-        return self.first_name + ' ' + self.last_name
+        return self.first_name + " " + self.last_name
 
     def __str__(self):
         return self.email

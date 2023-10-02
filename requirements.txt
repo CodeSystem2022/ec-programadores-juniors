@@ -15,8 +15,6 @@ django-ckeditor==6.5.1
 Pillow==9.2.0
 mutagen==1.46.0
 
-psycopg2==2.9.4
-
 argon2-cffi==21.3.0
 argon2-cffi-bindings==21.2.0
 
