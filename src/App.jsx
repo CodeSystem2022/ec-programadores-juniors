@@ -6,24 +6,26 @@ import store from "./store.js";
 
 // Containers Page
 import Home from "./containers/Home/Home";
-import Error404 from './containers/errors/Error404'
+import Contact from "./containers/Contact/Contact";
 import Help from "./containers/Help/Help";
+import Error404 from "./containers/errors/Error404";
 
 function App() {
   return (
     <Provider store={store}>
       <Router>
         <Routes>
-
           {/* Error 404 */}
           <Route path="*" element={<Error404 />} />
 
           {/* Home */}
           <Route path="/" element={<Home />} />
 
+          {/* Contacto */}
+          <Route path="/contact" element={<Contact />} />
+
           {/* Help */}
           <Route path="/help" element={<Help />} />
-
         </Routes>
       </Router>
     </Provider>
