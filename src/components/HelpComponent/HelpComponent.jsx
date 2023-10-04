@@ -68,15 +68,7 @@ function HelpComponent() {
                         answer='Encuentra detalles completos sobre nuestros productos, incluyendo materiales, características y cuidados en la descripción del producto.'
                     />
                 </div>
-
-
-
-
-
-
             </div>
-
-
         </>
     )
 }

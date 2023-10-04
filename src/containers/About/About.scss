@@ -1,0 +1,65 @@
+.txt {
+    font-size: 14px;
+    color: var(--black-color);
+    text-align: center;
+}
+
+.img-div {
+    width: 45%;
+}
+
+.about-img {
+    margin-left: 20px;
+    width: 70%;
+}
+
+
+
+.sqs-div {
+    position: relative;
+    margin-right: 10px;
+    height: 100px;
+   
+
+}
+
+.first-sq,
+.second-sq,
+.third-sq {
+    position: absolute;
+    background-color: var(--dark-blue);
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.first-sq {
+    height: 70px;
+    left: 0;
+    bottom: 0;
+
+}
+
+.second-sq {
+    height: 90px;
+    bottom: 0;
+}
+
+.third-sq {
+    height: 110px;
+    bottom: 0;
+    right: 0;
+}
+
+.text-div {
+    height: 100%;
+    background-color: var(--dark-blue);
+    width: 40%;
+    height: 208px;
+}
+
+.text-p {
+    padding:20px 10px;
+    font-size: 10px;
+    color: white;
+    text-align: center;
+} 

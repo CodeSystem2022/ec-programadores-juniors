@@ -1,21 +1,21 @@
+@import "../../scss/extend.scss";
+
 .auth-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @extend %flex-col-center-center;
   margin-top: 5%;
+
   h1 {
     font-size: 22px;
   }
+
   p {
     font-size: 13px;
-    color: #555555;
+    color: var(--black-color);
   }
 }
 
 .auth-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @extend %flex-col-center-center;
   width: 320px;
   margin: 20px auto;
   padding: 20px;
@@ -23,6 +23,7 @@
   box-shadow: 0 10px 7px rgba(0, 0, 0, 0.2);
   color: #333333;
   font-size: 14px;
+
   img {
     width: 30px;
     justify-self: center;
@@ -30,16 +31,12 @@
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @extend %flex-col-center-center;
   width: 85%;
 }
 
 .form-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @extend %flex-col-center-center;
   margin-bottom: 15px;
   width: 100%;
 }
@@ -52,6 +49,7 @@ textarea {
   margin-bottom: 10px;
   border: none;
   border-bottom: 1px solid #ccc;
+
   &:focus {
     outline: none;
   }
@@ -65,24 +63,27 @@ textarea {
 }
 
 button {
-  background-color: #222222;
-  color: #fff;
+  background-color: var(--sad-red);
+  color: var(--white);
   border: none;
   padding: 5px 40px;
   margin-bottom: 30px;
   cursor: pointer;
   transition: 0.3s ease-out;
+
+  &:hover {
+    background-color: var(--sad-red-light);
+  }
 }
 
-button:hover {
-  background-color: #444444;
-}
+
 
 a {
   transition: 0.3s ease-out;
-  color: #555555;
+  color: var(--dark-blue);
+
   &:hover {
-    color: #888888;
+    color: var(--light-blue);
   }
 }
 
