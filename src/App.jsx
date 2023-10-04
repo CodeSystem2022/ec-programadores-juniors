@@ -10,6 +10,8 @@ import Contact from "./containers/Contact/Contact";
 import Login from "./containers/Auth/Login";
 import Help from "./containers/Help/Help";
 import Error404 from "./containers/errors/Error404";
+import Register from "./containers/Auth/Register";
+import About from "./containers/About/About";
 
 function App() {
   return (
@@ -24,6 +26,12 @@ function App() {
 
           {/* Login */}
           <Route path="/login" element={<Login />} />
+
+          {/* Register */}
+          <Route path="/register" element={<Register />} />
+
+          {/* About */}
+          <Route path="/about" element={<About />} />
 
           {/* Contacto */}
           <Route path="/contact" element={<Contact />} />

@@ -23,7 +23,9 @@ const Contact = () => {
 
   return (
     <FullWidthLayout>
+      <h1 className="help-h1 text-center">CONTACTANOS</h1>
       <div className="contact-form">
+
         <img src={Logo} alt="" />
         <form onSubmit={handleSubmit}>
           <div className="form-group">

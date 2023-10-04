@@ -15,6 +15,11 @@
 
 .navbar-toggler {
     border: none;
+    margin-bottom: 0;
+
+    &:hover {
+        background-color: transparent !important;
+    }
 
     &:focus {
         box-shadow: none;
@@ -49,9 +54,13 @@
     width: 25%;
 }
 
-// .offcanvas .off-header .btn-close {
-//     color: var(--black-color) !important;
-// }
+.btn-close {
+    color: var(--black-color) !important;
+
+    &:hover {
+        background-color: transparent !important;
+    }
+}
 
 .dropdown-tg {
     transition: all 0.5s ease;

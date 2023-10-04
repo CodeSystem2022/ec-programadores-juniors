@@ -24,7 +24,7 @@ const Register = () => {
   return (
     <FullWidthLayout>
       <div className="auth-section">
-        <h1>Ingresar</h1>
+        <h1 className="help-h1">REGISTRO</h1>
         <div className="auth-form">
           <img src={Logo} alt="" />
           <form onSubmit={handleSubmit}>

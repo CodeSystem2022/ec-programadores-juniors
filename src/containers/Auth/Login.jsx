@@ -24,7 +24,7 @@ const Login = () => {
   return (
     <FullWidthLayout>
       <div className="auth-section">
-        <h1>Ingresar</h1>
+        <h1 className="help-h1">INGRESAR</h1>
         <p>¡Bienvenido! Ingresa a tu cuenta</p>
         <div className="auth-form">
           <img src={Logo} alt="" />
