@@ -1,0 +1,85 @@
+@import '../../scss/extend.scss';
+
+.e-container {
+    margin: 30px 0;
+    width: 100%;
+    @extend %flex-center-center;
+    flex-direction: column;
+
+}
+
+.e-title {
+    color: var(--dark-blue);
+    font-weight: bold;
+    font-size: 12.5rem;
+    margin: .025em 0;
+    text-shadow: .05em .05em 0 rgba(0, 0, 0, .25);
+    white-space: nowrap;
+
+    @media(max-width: 30rem) {
+        font-size: 8.5rem;
+    }
+
+    &>span {
+        animation: spooky 2s alternate infinite linear;
+        color: var(--sad-red);
+        display: inline-block;
+    }
+}
+
+
+
+
+
+.e-h2 {
+    font-size: 22px;
+    text-align: center;
+    margin: 0 20px;
+    color: var(--black-color);
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.e-text {
+    margin: 0 20px;
+}
+
+.e-img {
+    width: 20%;
+    border-bottom: 3px solid var(--light-grey);
+    animation: translate  2s  infinite linear;
+}
+
+.back-home {
+    margin-top: 20px;
+    padding: 5px 15px;
+    border-radius: 4px;
+    background-color: var(--sad-red);
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+        padding: 10px 20px;
+        transition: ease 0.3s;
+    }
+}
+
+@keyframes spooky {
+    from {
+        transform: translatey(.15em) scaley(.95);
+    }
+
+    to {
+        transform: translatey(-.15em);
+    }
+}
+
+@keyframes translate {
+    from {
+        transform: translatex(-300%) scaley(.95);
+    }
+
+    to {
+        transform: translatex(300%);
+    }
+}
