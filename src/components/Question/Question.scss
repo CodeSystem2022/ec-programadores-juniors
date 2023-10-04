@@ -1,0 +1,12 @@
+.question {
+    margin-bottom: 18px;
+    font-size: 16px;
+
+    &:hover {
+        color: var(--sad-red);
+    }
+}
+
+.answer {
+    font-size: 14px;
+}
