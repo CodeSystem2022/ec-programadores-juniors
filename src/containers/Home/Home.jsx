@@ -11,6 +11,10 @@ const Home = () => {
         <ProductsCarousel />
       </section>
 
+      <section>
+        <img className="home-img" src="./img/image2.jpeg" alt="home-image 2" />
+      </section>
+
     </FullWidthLayout>
   )
 
