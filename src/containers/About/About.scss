@@ -1,3 +1,9 @@
+@import '../../scss/extend.scss';
+
+.about-cont {
+    width: 100%;
+}
+
 .txt {
     font-size: 14px;
     color: var(--black-color);
@@ -5,21 +11,22 @@
 }
 
 .img-div {
-    width: 45%;
+    @extend %flex-center-center;
+    flex-direction: column;
 }
 
 .about-img {
     margin-left: 20px;
-    width: 70%;
+    width: 20%;
 }
 
 
 
 .sqs-div {
+    width: 80%;
     position: relative;
     margin-right: 10px;
-    height: 100px;
-   
+    height: 180px;
 
 }
 
@@ -27,39 +34,48 @@
 .second-sq,
 .third-sq {
     position: absolute;
-    background-color: var(--dark-blue);
-    width: 30%;
+    background-color: var(--sad-red);
+    width: 31%;
     box-sizing: border-box;
 }
 
 .first-sq {
-    height: 70px;
+    height: 140px;
     left: 0;
     bottom: 0;
 
 }
 
 .second-sq {
-    height: 90px;
+    height: 160px;
     bottom: 0;
 }
 
 .third-sq {
-    height: 110px;
+    height: 180px;
     bottom: 0;
     right: 0;
 }
 
-.text-div {
-    height: 100%;
-    background-color: var(--dark-blue);
-    width: 40%;
-    height: 208px;
-}
+
 
 .text-p {
-    padding:20px 10px;
+    padding: 20px 10px;
     font-size: 10px;
     color: white;
     text-align: center;
-} 
+}
+
+/* Estilos para laptops y pantallas más grandes (más de 1023px) */
+@media screen and (min-width: 1024px) {
+
+    .img-div {
+        width: 100%;
+    }
+    
+    .text-p {
+        font-size: 18px;
+    }
+
+
+}

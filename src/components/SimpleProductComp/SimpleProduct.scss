@@ -1,0 +1,17 @@
+@import '../../scss/extend.scss';
+
+.simprod-div {
+    @extend %flex-center-center;
+    flex-direction: column;
+}
+
+
+.simprod-title,
+.simprod-price,
+.simprod-img {
+    color: var(--black-color);
+}
+
+.simprod-img {
+    width: 50%;
+}
