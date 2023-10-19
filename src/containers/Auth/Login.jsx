@@ -53,7 +53,7 @@ const Login = () => {
             </div>
             <button type="submit">Ingresar</button>
 
-            <Link>¿Olvidaste tu contraseña?</Link>
+            <Link className="login-link">¿Olvidaste tu contraseña?</Link>
             <div className="have-account">
               <span>¿No tienes una cuenta?</span>
               <Link to={"/register"}>Regístrate</Link>

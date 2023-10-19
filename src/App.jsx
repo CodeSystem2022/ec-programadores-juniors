@@ -12,6 +12,7 @@ import Help from "./containers/Help/Help";
 import Error404 from "./containers/errors/Error404";
 import Register from "./containers/Auth/Register";
 import About from "./containers/About/About";
+import Products from "./containers/Products/Products";
 
 function App() {
   return (
@@ -38,6 +39,10 @@ function App() {
 
           {/* Help */}
           <Route path="/help" element={<Help />} />
+
+          {/* Vista cards de productos */}
+          <Route path="/products" element={<Products />} />
+
         </Routes>
       </Router>
     </Provider>
