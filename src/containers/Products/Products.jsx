@@ -11,7 +11,7 @@ const Products = ({ products }) => {
       <div className='container'>
         <div className='row'>
           {products.map((product, index) => (
-            <CardProduct key={index} name={product.name} price={product.price} img={product.img} />
+            <CardProduct key={index} id={product.id} name={product.name} price={product.price} img={product.img} />
           ))}
         </div>
       </div>
