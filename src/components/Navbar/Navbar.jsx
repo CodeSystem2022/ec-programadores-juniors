@@ -186,11 +186,8 @@ const NavbarComponent = () => {
               type="text"
               placeholder="¿Qué estás buscando?"
             />
-            <button
-              className="close-searchbar-button"
-              onClick={handleCloseSearchBar}
-            >
-              X
+            <button className="close-searchbar-button">
+              <FontAwesomeIcon className="nav-icon" icon={faMagnifyingGlass} />
             </button>
           </div>
         </Offcanvas.Body>

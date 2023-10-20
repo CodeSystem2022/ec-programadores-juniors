@@ -92,7 +92,7 @@
 .search-input-container {
   display: flex;
   border-radius: 20px;
-  background: #ddd;
+  background-color: var(--light-grey);
   justify-content: center;
   height: 35px;
   margin-top: 5%;
@@ -107,7 +107,6 @@
 
 .close-searchbar-button {
   background: transparent;
-  color: #444;
   margin: auto;
 }
 .close-searchbar-button:hover {
