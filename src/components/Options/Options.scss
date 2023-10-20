@@ -1,0 +1,54 @@
+.options-container {
+    width: 100%;
+    margin-bottom: 30px;
+    height: 40px;
+}
+
+.category-div,
+.filter-button,
+.order-button {
+    height: 100%;
+    border: 1px solid var(--light-grey);
+}
+
+.category-div {
+    display: flex;
+    align-items: center;
+}
+
+.category-div,
+.order-button {
+    width: 40%;
+}
+
+.option-text {
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+
+.filter-button {
+    width: 20%;
+}
+
+.dropdown-toggle {
+    margin-bottom: 0;
+    background-color: var(--bg-color);
+    border-radius: 0;
+    border: none;
+    color: var(--black-color);
+
+    &:hover {
+        color: var(--black-color);
+        background-color: var(--bg-color);
+    }
+
+    &:focus {
+        color: var(--black-color);
+        background-color: var(--bg-color);
+    }
+
+    &:active {
+        color: var(--black-color) !important;
+        background-color: var(--bg-color) !important;
+    }
+}

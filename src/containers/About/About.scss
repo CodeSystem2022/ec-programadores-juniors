@@ -1,0 +1,81 @@
+@import '../../scss/extend.scss';
+
+.about-cont {
+    width: 100%;
+}
+
+.txt {
+    font-size: 14px;
+    color: var(--black-color);
+    text-align: center;
+}
+
+.img-div {
+    @extend %flex-center-center;
+    flex-direction: column;
+}
+
+.about-img {
+    margin-left: 20px;
+    width: 20%;
+}
+
+
+
+.sqs-div {
+    width: 80%;
+    position: relative;
+    margin-right: 10px;
+    height: 180px;
+
+}
+
+.first-sq,
+.second-sq,
+.third-sq {
+    position: absolute;
+    background-color: var(--sad-red);
+    width: 31%;
+    box-sizing: border-box;
+}
+
+.first-sq {
+    height: 140px;
+    left: 0;
+    bottom: 0;
+
+}
+
+.second-sq {
+    height: 160px;
+    bottom: 0;
+}
+
+.third-sq {
+    height: 180px;
+    bottom: 0;
+    right: 0;
+}
+
+
+
+.text-p {
+    padding: 20px 10px;
+    font-size: 10px;
+    color: white;
+    text-align: center;
+}
+
+/* Estilos para laptops y pantallas más grandes (más de 1023px) */
+@media screen and (min-width: 1024px) {
+
+    .img-div {
+        width: 100%;
+    }
+    
+    .text-p {
+        font-size: 18px;
+    }
+
+
+}

@@ -1,6 +1,6 @@
 import CarouselText from "../../components/CarouselText/CarouselText.JSX"
-import NavbarComponent from "../../components/Navbar/Navbar"
-import ShippingLine from "../../components/ShippingLine/ShippingLine"
+import NavbarComponent from "../Navbar/Navbar"
+import ShippingLine from "../ShippingLine/ShippingLine"
 
 const Header = () => {
     return (

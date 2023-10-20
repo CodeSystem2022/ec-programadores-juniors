@@ -2,17 +2,21 @@
     scroll-behavior: smooth;
     overscroll-behavior: none;
     --bg-color: #FFFCFF;
-    --white:#faf0f0;
+    --white: #faf0f0;
     --black-color: #111111;
     --dark-color-shadow: rgba(0, 27, 46, 0.315);
     --light-grey: #E9EAEC;
     --sad-red: #93252A;
+    --sad-red-light: #b62f35;
     --dark-blue: #333652;
+    --light-blue: #4e5481;
+    --grey: #555555;
+    --mid-grey: #cccccc;
 
     // hay que cambiar las fuentes aqui
     --fuente-encabezados-test: 'Anton', sans-serif;
     --fuente-principal: 'Arial', sans-serif;
-    --fuente-encabezados: 'Helvetica Neue', sans-serif;
+    --fuente-encabezados: 'League Spartan', sans-serif;
     --fuente-texto: 'Roboto', sans-serif;
 }
 

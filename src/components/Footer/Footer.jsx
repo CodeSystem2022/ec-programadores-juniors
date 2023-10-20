@@ -8,8 +8,9 @@ const Footer = () => {
     return (
         <div className='footer d-flex flex-column justify-content-start'>
             <div className='footer-menu d-flex flex-column'>
-                <Link to="/" className='footer-link'>AYUDA</Link>
-                <Link className='footer-link'>ACERDA DE SPORTBLEND</Link>
+                <Link to="/help" className='footer-link'>AYUDA</Link>
+                <Link to="/about" className='footer-link'>ACERCA DE SPORTBLEND</Link>
+                <Link to="/contact" className='footer-link'>CONTACTO</Link>
             </div>
 
             <div className='footer-icons-cont d-flex justify-content-space-around'>

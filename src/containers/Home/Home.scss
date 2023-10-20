@@ -1,1 +1,41 @@
-//Apply
+.home-img {
+    width: 100%;
+}
+
+.home-h1 {
+    margin: 20px 15px;
+    font-weight: bold;
+    color: var(--black-color);
+}
+
+.home-h2 {
+    margin: 20px 15px 0 15px;
+}
+
+.section-text {
+    margin-left: 15px;
+}
+
+.gender-div {
+    margin-bottom: 40px;
+   
+}
+
+.gender-title {
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.gender-img {
+    width: 100%;
+}
+
+.gender-link {
+    width: 40%;
+    margin-top: 20px;
+    color: var(--white);
+    text-decoration: none;
+    background-color: var(--sad-red);
+    padding: 10px 60px;
+    border-radius: 4px;
+}

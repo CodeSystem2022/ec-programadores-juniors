@@ -1,0 +1,52 @@
+@import "../../scss/extend.scss";
+
+.contact-form {
+  @extend %flex-col-center-center;
+  width: 320px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 10px 7px rgba(0, 0, 0, 0.2);
+  color: #333333;
+  font-size: 14px;
+
+  img {
+    width: 30px;
+    justify-self: center;
+  }
+}
+
+form {
+  @extend %flex-center-center;
+  width: 85%;
+}
+
+.form-group {
+  @extend %flex-col-center-center;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+textarea {
+  border-radius: 5px;
+  background-color: var(--mid-grey);
+  height: 140px;
+  resize: none;
+}
+
+
+

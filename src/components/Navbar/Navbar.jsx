@@ -7,11 +7,17 @@ import { Link } from 'react-router-dom';
 import './Navbar.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faMagnifyingGlass, faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import Collapse from 'react-bootstrap/Collapse';
+
 const NavbarComponent = () => {
 
     return (
         <div className='nav-container'>
+            <Navbar.Brand className='navbar-brand-laptop' href="./">
+                <img className='img-logo'
+                    src="./logo/sportblend-logo.png"
+                    alt="logo"
+                />
+            </Navbar.Brand>
             <Navbar key='lg' expand='lg' className="navbar">
                 <Container fluid>
                     <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-lg`} />
@@ -23,15 +29,16 @@ const NavbarComponent = () => {
                         <Offcanvas.Header className='off-header' closeButton>
                             <Offcanvas.Title className='off-title' id={`offcanvasNavbarLabel-expand-lg`}>
                                 <img className='img-logo'
-                                    src="./logo/sportblend.png"
+                                    src="./logo/sportblend-logo.png"
                                     alt="logo"
                                 />
                             </Offcanvas.Title>
                         </Offcanvas.Header>
+
                         <Offcanvas.Body>
                             <Nav className="justify-content-end flex-grow-1">
                                 <NavDropdown className='dropdown-tg'
-                                    title={<div className=' d-flex justify-content-between '>
+                                    title={<div className=' d-flex justify-content-between align-items-center'>
                                         <p className='nav-text'>Destacados</p>
                                         <FontAwesomeIcon icon={faChevronDown} />
                                     </div>
@@ -39,77 +46,77 @@ const NavbarComponent = () => {
                                     id={`offcanvasNavbarDropdown-expand-lg`}
                                 >
 
-                                    <NavDropdown.Item href="#action3">
+                                    <NavDropdown.Item className='navDropdown' href="#action3">
                                         Calzado
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item href="#action4">
+                                    <NavDropdown.Item className='navDropdown' href="#action4">
                                         Indumentaria
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item href="#action5">
+                                    <NavDropdown.Item className='view-all navDropdown' href="#action5">
                                         Ver Todo
                                     </NavDropdown.Item>
 
                                 </NavDropdown>
                                 <NavDropdown
-                                    title={<div className='d-flex justify-content-between'>
+                                    title={<div className='d-flex justify-content-between align-items-center'>
                                         <p className='nav-text'>Mujer</p>
                                         <FontAwesomeIcon icon={faChevronDown} />
                                     </div>
                                     }
                                     id={`offcanvasNavbarDropdown-expand-lg`}
                                 >
-                                    <NavDropdown.Item href="#action3">
+                                    <NavDropdown.Item href="#action3" className='navDropdown'>
                                         Calzado
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item href="#action4">
+                                    <NavDropdown.Item href="#action4" className='navDropdown'>
                                         Indumentaria
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item href="#action5">
+                                    <NavDropdown.Item className='view-all navDropdown' href="#action5">
                                         Ver Todo
                                     </NavDropdown.Item>
 
                                 </NavDropdown>
                                 <NavDropdown
-                                    title={<div className='d-flex justify-content-between'>
+                                    title={<div className='d-flex justify-content-between align-items-center'>
                                         <p className='nav-text'>Hombre</p>
                                         <FontAwesomeIcon icon={faChevronDown} />
                                     </div>
                                     }
                                     id={`offcanvasNavbarDropdown-expand-lg`}
                                 >
-                                    <NavDropdown.Item href="#action3">
+                                    <NavDropdown.Item className='navDropdown' href="#action3">
                                         Calzado
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item href="#action4">
+                                    <NavDropdown.Item className='navDropdown' href="#action4">
                                         Indumentaria
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item href="#action5">
+                                    <NavDropdown.Item className='view-all navDropdown' href="#action5">
                                         Ver Todo
                                     </NavDropdown.Item>
 
                                 </NavDropdown>
                                 <NavDropdown
-                                    title={<div className='d-flex justify-content-between'>
+                                    title={<div className='d-flex justify-content-between align-items-center'>
                                         <p className='nav-text'>Niño/a</p>
                                         <FontAwesomeIcon icon={faChevronDown} />
                                     </div>
                                     }
                                     id={`offcanvasNavbarDropdown-expand-lg`}
                                 >
-                                    <NavDropdown.Item href="#action3">
+                                    <NavDropdown.Item className='navDropdown' href="#action3">
                                         Calzado
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item href="#action4">
+                                    <NavDropdown.Item className='navDropdown' href="#action4">
                                         Indumentaria
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item href="#action5">
+                                    <NavDropdown.Item className='view-all navDropdown' href="#action5">
                                         Ver Todo
                                     </NavDropdown.Item>
 
                                 </NavDropdown>
-                                <Nav.Link href="#action1">Accesorios</Nav.Link>
-                                <Nav.Link href="#action2">Mi Cuenta</Nav.Link>
-                                <Nav.Link href="#action2">Salir</Nav.Link>
+                                <Nav.Link className='nav-link' href="#action1">Accesorios</Nav.Link>
+                                <Nav.Link className='nav-link' href="#action2">Mi Cuenta</Nav.Link>
+                                <Nav.Link className='nav-link' href="#action2">Salir</Nav.Link>
 
                             </Nav>
 
@@ -120,7 +127,7 @@ const NavbarComponent = () => {
 
             <Navbar.Brand className='navbar-brand' href="./">
                 <img className='img-logo'
-                    src="./logo/sportblend.png"
+                    src="./logo/sportblend-logo.png"
                     alt="logo"
                 />
             </Navbar.Brand>

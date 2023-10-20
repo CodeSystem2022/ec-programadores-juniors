@@ -29,7 +29,7 @@ const CarouselText = () => {
                 <div className='bg-box'></div>
                 <Carousel.Caption>
                     <p className='csl-txt'>
-                        Envío gratis en provicia de Mendoza
+                        Envío gratis en provincia de Mendoza
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>

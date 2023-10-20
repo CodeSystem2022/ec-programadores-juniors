@@ -1,6 +1,5 @@
-
-import Footer from "../containers/Footer/Footer"
-import Header from "../containers/Header/Header"
+import Footer from "../components/Footer/Footer"
+import Header from "../components/Header/Header"
 
 
 const FullWidthLayout = ({ children }) => {

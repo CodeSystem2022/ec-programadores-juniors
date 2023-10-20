@@ -1,7 +1,15 @@
 .sp-line {
-    background-color: var(--black-color);
+    background-color: var(--sad-red);
     color: var(--white);
     text-align: center;
     font-size: 10px;
     margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+
+    .sp-line {
+        font-size: 14px;
+    }
+
 }

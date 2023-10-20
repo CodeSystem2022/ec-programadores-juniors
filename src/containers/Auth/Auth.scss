@@ -1,0 +1,93 @@
+@import "../../scss/extend.scss";
+
+.auth-section {
+  @extend %flex-col-center-center;
+  margin-top: 5%;
+
+  h1 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 13px;
+    color: var(--black-color);
+  }
+}
+
+.auth-form {
+  @extend %flex-col-center-center;
+  width: 320px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 7px rgba(0, 0, 0, 0.2);
+  color: #333333;
+  font-size: 14px;
+
+  img {
+    width: 30px;
+    justify-self: center;
+  }
+}
+
+form {
+  @extend %flex-col-center-center;
+  width: 85%;
+}
+
+.form-group {
+  @extend %flex-col-center-center;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+textarea {
+  border-radius: 5px;
+  background-color: #cccccc;
+  height: 140px;
+  resize: none;
+}
+
+button {
+  background-color: var(--sad-red);
+  color: var(--white);
+  border: none;
+  padding: 5px 40px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+
+  &:hover {
+    background-color: var(--sad-red-light);
+  }
+}
+
+
+
+.login-link {
+  transition: 0.3s ease-out;
+  color: var(--dark-blue);
+
+  &:hover {
+    color: var(--light-blue);
+  }
+}
+
+.have-account {
+  display: flex;
+  gap: 10px;
+}

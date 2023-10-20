@@ -2,6 +2,10 @@
 
 // navbar
 
+.navbar-brand-laptop {
+    display: none;
+}
+
 .nav-container {
     @extend %flex-between-center;
     flex-direction: row;
@@ -15,6 +19,11 @@
 
 .navbar-toggler {
     border: none;
+    margin-bottom: 0;
+
+    &:hover {
+        background-color: transparent !important;
+    }
 
     &:focus {
         box-shadow: none;
@@ -22,7 +31,7 @@
 }
 
 .navbar-brand {
-    width: 30%;
+    width: 17%;
 }
 
 
@@ -46,12 +55,16 @@
 }
 
 .off-title {
-    width: 40%;
+    width: 25%;
 }
 
-// .offcanvas .off-header .btn-close {
-//     color: var(--black-color) !important;
-// }
+.btn-close {
+    color: var(--black-color) !important;
+
+    &:hover {
+        background-color: transparent !important;
+    }
+}
 
 .dropdown-tg {
     transition: all 0.5s ease;
@@ -70,4 +83,95 @@
 
 .nav-text {
     margin: 0;
+}
+
+.navDropdown {
+    animation: slide-down 0.3s ease-out;
+    /* Adjust the duration and easing as needed */
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.view-all {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+
+@media screen and (min-width: 620px) and (max-width: 990px) {
+    /* Agrega aquí tus estilos específicos para tablets */
+
+    .navbar-brand {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-logo {
+        width: 70%;
+    }
+
+
+    /* Otros estilos para tablets */
+}
+
+@media screen and (min-width: 991px) and (max-width: 1023px) {
+    /* Agrega aquí tus estilos específicos para tablets */
+
+    .img-logo {
+        width: 50%;
+    }
+
+    .nav-icon {
+        font-size: 24px;
+    }
+
+    .navbar-brand {
+        display: none;
+    }
+
+    .navbar-brand-laptop {
+        display: inherit;
+        padding-left: 10px;
+    }
+
+    /* Otros estilos para tablets */
+}
+
+
+/* Estilos para laptops y pantallas más grandes (más de 1023px) */
+@media screen and (min-width: 1024px) {
+
+    // .img-logo {
+    //     width: 60%;
+    // }
+
+    .nav-icon {
+        font-size: 24px;
+    }
+
+    .navbar-brand {
+        display: none;
+    }
+
+    .navbar-brand-laptop {
+        display: inherit;
+        padding-left: 10px;
+        width: 8%;
+    }
+
+    .nav-link, .nav-text {
+        font-size: 20px;
+    }
+
+    /* Otros estilos para laptops y pantallas más grandes */
 }

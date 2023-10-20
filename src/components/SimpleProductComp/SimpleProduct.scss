@@ -1,0 +1,27 @@
+@import '../../scss/extend.scss';
+
+.simprod-div {
+    @extend %flex-center-center;
+    flex-direction: column;
+}
+
+
+.simprod-title,
+.simprod-img {
+    color: var(--black-color);
+}
+
+.simprod-price {
+    color: var(--sad-red);
+}
+
+.simprod-img {
+    width: 50%;
+
+}
+
+.simprod-link {
+    &:hover {
+        border: 1px solid var(--black-color) !important;
+    }
+}
