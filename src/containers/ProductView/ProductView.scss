@@ -1,0 +1,58 @@
+@import "../../scss/extend.scss";
+
+.product-container {
+  margin: 40px 20px;
+}
+
+.product-img {
+  width: 100%;
+}
+
+.product-title {
+  font-size: 26px;
+  color: var(--black-color);
+}
+
+.product-price {
+  color: var(--sad-red);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.size-title {
+  color: var(--black-color);
+  font-size: 16px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.size {
+  @extend %flex-start-center;
+  flex-wrap: wrap;
+}
+
+.size-button {
+  background-color: var(--white);
+  color: var(--black-color);
+  padding: 0;
+  margin: 0 20px 15px 0;
+  width: 45px;
+  height: 45px;
+  border: 1px solid var(--black-color);
+  &:active {
+    background-color: var(--dark-blue);
+    color: var(--white);
+  }
+
+  &:focus {
+    background-color: var(--dark-blue);
+    color: var(--white);
+  }
+}
+
+.add-button {
+  width: 80%;
+  border-radius: 4px;
+}
+
+

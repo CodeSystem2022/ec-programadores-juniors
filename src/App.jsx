@@ -13,6 +13,8 @@ import Error404 from "./containers/errors/Error404";
 import Register from "./containers/Auth/Register";
 import About from "./containers/About/About";
 import Products from "./containers/Products/Products";
+import ProductView from "./containers/ProductView/ProductView";
+
 
 function App() {
   return (
@@ -42,6 +44,9 @@ function App() {
 
           {/* Vista cards de productos */}
           <Route path="/products" element={<Products />} />
+
+          {/* Vista de un producto */}
+          <Route path="/product" element={<ProductView />} />
 
         </Routes>
       </Router>
