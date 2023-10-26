@@ -50,7 +50,7 @@ function App() {
           <Route path="/product" element={<ProductView />} />
 
           {/* Activacion */}
-          <Route path="/activation/:uuid/:token" element={<Activation />} />
+          <Route path="/activation/:uid/:token" element={<Activation />} />
         </Routes>
       </Router>
     </Provider>
