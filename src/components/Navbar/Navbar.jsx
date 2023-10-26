@@ -13,8 +13,12 @@ import {
   faChevronDown,
 } from "@fortawesome/free-solid-svg-icons";
 
+import SearchBar from "./Searchbar/Searchbar";
+import Cart from "./Cart/Cart";
+
 const NavbarComponent = () => {
   const [showSearchBar, setShowSearchBar] = useState(false);
+  const [showCart, setShowCart] = useState(false);
 
   const handleSearchIconClick = () => {
     setShowSearchBar(true);
@@ -22,6 +26,13 @@ const NavbarComponent = () => {
 
   const handleCloseSearchBar = () => {
     setShowSearchBar(false);
+  };
+  const handleCartIconClick = () => {
+    setShowCart(true);
+  };
+
+  const handleCloseCart = () => {
+    setShowCart(false);
   };
 
   return (
@@ -160,7 +171,7 @@ const NavbarComponent = () => {
         <img className="img-logo" src="./logo/sportblend-logo.png" alt="logo" />
       </Navbar.Brand>
       <div className="icons-container">
-        <Link>
+        <Link onClick={handleCartIconClick}>
           <FontAwesomeIcon className="nav-icon" icon={faCartShopping} />
         </Link>
         <Link onClick={handleSearchIconClick}>
@@ -168,30 +179,8 @@ const NavbarComponent = () => {
         </Link>
       </div>
 
-      <Offcanvas
-        show={showSearchBar}
-        onHide={handleCloseSearchBar}
-        placement="end"
-        style={{
-          height: "100px",
-          width: "100%",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Offcanvas.Body>
-          <div className="search-input-container">
-            <input
-              className="input-searchbar"
-              type="text"
-              placeholder="¿Qué estás buscando?"
-            />
-            <button className="close-searchbar-button">
-              <FontAwesomeIcon className="nav-icon" icon={faMagnifyingGlass} />
-            </button>
-          </div>
-        </Offcanvas.Body>
-      </Offcanvas>
+      <SearchBar show={showSearchBar} handleClose={handleCloseSearchBar} />
+      <Cart show={showCart} handleClose={handleCloseCart} />
     </div>
   );
 };
