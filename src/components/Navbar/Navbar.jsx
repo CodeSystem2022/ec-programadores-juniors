@@ -68,7 +68,7 @@ const NavbarComponent = () => {
                   title={
                     <div className=" d-flex justify-content-between align-items-center">
                       <p className="nav-text">Destacados</p>
-                      <FontAwesomeIcon icon={faChevronDown} />
+                      <FontAwesomeIcon icon={faChevronDown} className="chevron-icon"/>
                     </div>
                   }
                   id={`offcanvasNavbarDropdown-expand-lg`}
@@ -90,7 +90,7 @@ const NavbarComponent = () => {
                   title={
                     <div className="d-flex justify-content-between align-items-center">
                       <p className="nav-text">Mujer</p>
-                      <FontAwesomeIcon icon={faChevronDown} />
+                      <FontAwesomeIcon icon={faChevronDown} className="chevron-icon"/>
                     </div>
                   }
                   id={`offcanvasNavbarDropdown-expand-lg`}
@@ -112,7 +112,7 @@ const NavbarComponent = () => {
                   title={
                     <div className="d-flex justify-content-between align-items-center">
                       <p className="nav-text">Hombre</p>
-                      <FontAwesomeIcon icon={faChevronDown} />
+                      <FontAwesomeIcon icon={faChevronDown} className="chevron-icon"/>
                     </div>
                   }
                   id={`offcanvasNavbarDropdown-expand-lg`}
@@ -134,7 +134,7 @@ const NavbarComponent = () => {
                   title={
                     <div className="d-flex justify-content-between align-items-center">
                       <p className="nav-text">Niño/a</p>
-                      <FontAwesomeIcon icon={faChevronDown} />
+                      <FontAwesomeIcon icon={faChevronDown} className="chevron-icon"/>
                     </div>
                   }
                   id={`offcanvasNavbarDropdown-expand-lg`}

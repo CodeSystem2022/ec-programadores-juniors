@@ -108,7 +108,7 @@ const Register = () => {
               required
             />
           </div>
-          <button type="submit" disabled={loading}> {loading ? 'loading...' : 'register'}</button>
+          <button type="submit" disabled={loading}> {loading ? 'Loading...' : 'Register'}</button>
 
           <div className="have-account">
             <span>¿Ya tienes una cuenta?</span>
