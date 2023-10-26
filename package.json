@@ -25,7 +25,8 @@
     "react-router-dom": "^6.16.0",
     "redux": "^4.2.1",
     "redux-devtools-extension": "^2.13.9",
-    "redux-thunk": "^2.4.2"
+    "redux-thunk": "^2.4.2",
+    "sonner": "^1.0.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

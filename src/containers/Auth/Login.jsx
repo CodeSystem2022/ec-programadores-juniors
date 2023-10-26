@@ -6,7 +6,7 @@ import "./Auth.scss";
 
 const Login = () => {
   const [formData, setFormData] = useState({
-    usuario: "",
+    email: "",
     password: "",
   });
 
@@ -18,7 +18,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    setFormData({ usuario: "", password: "" });
+    setFormData({ email: "", password: "" });
   };
 
   return (
@@ -32,10 +32,10 @@ const Login = () => {
             <div className="form-group">
               <input
                 type="text"
-                id="usuario"
-                name="usuario"
-                placeholder="Usuario"
-                value={formData.usuario}
+                id="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
                 onChange={handleChange}
                 required
               />
