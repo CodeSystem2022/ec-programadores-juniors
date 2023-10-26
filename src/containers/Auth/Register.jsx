@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, redirect, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import FullWidthLayout from "../../layouts/FullWidthLayout";
 import Logo from "../../../public/logo/logo.png";
 import "./Auth.scss";
@@ -39,7 +39,10 @@ const Register = () => {
     }).catch(error => {
       toast.error('Error al crear el usuario');
       // Manejar errores aquí
-      console.log(error.response.data);
+      if (error.response)
+      {
+        console.log(error.response.data);
+      }
       // setErrors(error.response.data)
     }).finally(() => {
       // Este bloque se ejecutará sin importar si la solicitud fue exitosa o falló
