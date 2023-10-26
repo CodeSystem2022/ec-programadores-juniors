@@ -14,6 +14,7 @@ import Register from "./containers/Auth/Register";
 import About from "./containers/About/About";
 import Products from "./containers/Products/Products";
 import ProductView from "./containers/ProductView/ProductView";
+import Activation from "./containers/Activation/Activation";
 
 
 function App() {
@@ -48,10 +49,12 @@ function App() {
           {/* Vista de un producto */}
           <Route path="/product" element={<ProductView />} />
 
+          {/* Activacion */}
+          <Route path="/activation/:uuid/:token" element={<Activation />} />
         </Routes>
       </Router>
     </Provider>
-  );
+  )
 }
 
 export default App;
