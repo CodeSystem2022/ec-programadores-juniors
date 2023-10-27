@@ -201,7 +201,7 @@
   }
 
   .navbar-brand-laptop {
-    display: inherit;
+    display: inherit !important;
     padding-left: 10px;
     width: 8%;
   }
@@ -213,6 +213,10 @@
 
   .cart-side-bar {
     width: 20% !important;
+  }
+
+  .chevron-icon {
+    display: none;
   }
 
   /* Otros estilos para laptops y pantallas más grandes */
