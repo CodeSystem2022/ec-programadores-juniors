@@ -22,11 +22,10 @@ const Activation = () => {
     }, [])
     return (
         <FullWidthLayout>
-<<<<<<< HEAD
+
             <h1 className="activate">Activando...</h1>
-=======
-           <h1 className="activate">Activando...</h1>
->>>>>>> 3935dbe02f87c1c5b70a6594becf1b78b8b0d715
+
+
         </FullWidthLayout>
     )
 }
