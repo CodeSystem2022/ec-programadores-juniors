@@ -22,10 +22,7 @@ const Activation = () => {
     }, [])
     return (
         <FullWidthLayout>
-
             <h1 className="activate">Activando...</h1>
-
-
         </FullWidthLayout>
     )
 }

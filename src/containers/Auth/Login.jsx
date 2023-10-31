@@ -1,14 +1,20 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import FullWidthLayout from "../../layouts/FullWidthLayout";
 import Logo from "../../../public/logo/logo.png";
 import "./Auth.scss";
+import Axios from 'axios';
+import { toast } from "sonner";
 
 const Login = () => {
+
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,8 +23,31 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
-    setFormData({ email: "", password: "" });
+
+    e.preventDefault();
+    setLoading(true);
+    Axios.post(`${import.meta.env.VITE_APP_HOST}/api/jwt/create/`, formData).then(response => {
+      if (response.status === 201) {
+        toast.success('Sesión iniciada');
+        // navigate('/');
+      }
+
+    }).catch(error => {
+      toast.error('Error al iniciar sesión');
+      // Manejar errores aquí
+      if (error.response) {
+        console.log(error.response.data);
+      }
+      // setErrors(error.response.data)
+    }).finally(() => {
+      // Este bloque se ejecutará sin importar si la solicitud fue exitosa o falló
+
+      // setFormData({ first_name: "", last_name: "", email: "", password: "", re_password: "" });
+      setLoading(false);
+    });
+
+
+    // setFormData({ email: "", password: "" });
   };
 
   return (
@@ -51,7 +80,7 @@ const Login = () => {
                 required
               />
             </div>
-            <button type="submit">Ingresar</button>
+            <button type="submit" disabled={loading}> {loading ? 'Loading...' : 'Ingresar'}</button>
 
             <Link className="login-link">¿Olvidaste tu contraseña?</Link>
             <div className="have-account">
