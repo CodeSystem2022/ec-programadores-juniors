@@ -13,7 +13,7 @@ function Error404() {
             <FontAwesomeIcon className="mx-4 e-icon" icon={faFaceDizzy} />
           </span>4</h1>
         <h2 className="e-h2">UPS, NO SE ENCUENTRA LO QUE BUSCABAS</h2>
-        <p className="e-text">¡Será mejor que corras a inicio!</p>
+        <p className="e-text">¡Será mejor que corras al inicio!</p>
         <img className="e-img" src="./logo/logo.png" alt="runman" />
         <Link className="back-home" to='/'> Volver </Link>
       </div>
