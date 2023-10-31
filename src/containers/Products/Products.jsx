@@ -1,4 +1,3 @@
-import React from 'react'
 import { connect } from 'react-redux';
 import FullWidthLayout from "../../layouts/FullWidthLayout";
 import CardProduct from '../../components/CardProduct/CardProduct';
