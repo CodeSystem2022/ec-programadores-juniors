@@ -1,7 +1,7 @@
 # React + Vite
 
 1. Ejecutar npm i o npm install para instalar las dependencias.
-2. Ejecutar npm run dev. Recuerde estar parados en la carpeta sport-blend
+2. Ejecutar npm run dev. Recuerde estar dentro de la carpeta sport-blend
 
 Currently, two official plugins are available:
 
