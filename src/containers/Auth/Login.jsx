@@ -21,17 +21,27 @@ const Login = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     e.preventDefault();
     setLoading(true);
     Axios.post(`${import.meta.env.VITE_APP_HOST}/api/jwt/create/`, formData).then(response => {
-      if (response.status === 201) {
+      if (response.status === 200) {
         toast.success('Sesión iniciada');
         // navigate('/');
+       
+        Axios.get(`${import.meta.env.VITE_APP_HOST}/api/users/me/`,
+          {
+            headers: {
+              'Cookie':`access=${response.data.access}`,
+            }
+          }).then(response => {
+            console.log(response.data);
+          });
       }
-
     }).catch(error => {
       toast.error('Error al iniciar sesión');
       // Manejar errores aquí
