@@ -26,9 +26,10 @@ const Login = () => {
 
     e.preventDefault();
     setLoading(true);
-    Axios.post(`${import.meta.env.VITE_APP_HOST}/api/jwt/create/`, formData).then(response => {
-      if (response.status === 201) {
+    Axios.post(`${import.meta.env.VITE_APP_HOST}/api/jwt/create/`, formData, {withCredentials: true}).then(response => {
+      if (response.status === 200) {
         toast.success('Sesión iniciada');
+        console.log(response.data)
         // navigate('/');
       }
 
