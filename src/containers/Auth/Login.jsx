@@ -28,20 +28,13 @@ const Login = () => {
 
     e.preventDefault();
     setLoading(true);
-    Axios.post(`${import.meta.env.VITE_APP_HOST}/api/jwt/create/`, formData).then(response => {
+    Axios.post(`${import.meta.env.VITE_APP_HOST}/api/jwt/create/`, formData, { withCredentials: true }).then(response => {
       if (response.status === 200) {
         toast.success('Sesión iniciada');
+        console.log(response.data)
         // navigate('/');
-       
-        Axios.get(`${import.meta.env.VITE_APP_HOST}/api/users/me/`,
-          {
-            headers: {
-              'Cookie':`access=${response.data.access}`,
-            }
-          }).then(response => {
-            console.log(response.data);
-          });
       }
+
     }).catch(error => {
       toast.error('Error al iniciar sesión');
       // Manejar errores aquí
@@ -56,9 +49,8 @@ const Login = () => {
       setLoading(false);
     });
 
-
-    // setFormData({ email: "", password: "" });
   };
+
 
   return (
     <FullWidthLayout>
