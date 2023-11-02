@@ -9,7 +9,7 @@ const Activation = () => {
     const { uid, token } = useParams();
     const navigate = useNavigate();
     useEffect(() => {
-        Axios.post(`${import.meta.env.VITE_APP_HOST}/api/users/activation/`, { uid, token })
+        Axios.post(`${import.meta.env.VITE_APP_HOST}/users/activation/`, { uid, token })
             .then(response => {
                 console.log(response.data);
                 toast.success('Activación completada');
