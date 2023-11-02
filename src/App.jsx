@@ -1,7 +1,7 @@
 import "./assets/styles/App.scss";
 // Rutas
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Provider, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
 
 // Containers Page
@@ -62,7 +62,7 @@ function App() {
         <Route path="/products" element={<Products />} />
 
         {/* Vista de un producto */}
-        <Route path="/product" element={<ProductView />} />
+        <Route path="/product/:id" element={<ProductView />} />
 
         {/* Activacion */}
         <Route path="/activation/:uid/:token" element={<Activation />} />

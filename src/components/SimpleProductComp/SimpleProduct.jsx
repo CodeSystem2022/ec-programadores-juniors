@@ -3,6 +3,7 @@ import './SimpleProduct.scss'
 
 const SimpleProduct = ({ name, price, img }) => {
 
+
     return (
         <div className='simprod-div'>
             <Link className='simprod-link' to={"/"}>

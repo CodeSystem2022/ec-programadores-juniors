@@ -1,30 +1,17 @@
-import React from 'react'
-import { connect } from 'react-redux';
+import { useState } from 'react'
+import Axios from 'axios';
 import FullWidthLayout from "../../layouts/FullWidthLayout";
 import CardProduct from '../../components/CardProduct/CardProduct';
 import Options from '../../components/Options/Options';
 
 const Products = () => {
-  const products = [
-    {
-      id: 1,
-      name: "Zapatilla Saucony Axon 3",
-      price: 70000,
-      img: './img/prod-test.jpg'
-    },
-    {
-      id: 2,
-      name: "Zapatilla Saucony Axon 3",
-      price: 80000,
-      img: './img/prod-test2.jpg'
-    },
-    {
-      id: 3,
-      name: "Zapatilla Saucony Axon 3",
-      price: 90000,
-      img: './img/prod-test.jpg'
-    }
-  ]
+  const [products, setProducts] = useState([])
+
+  Axios.get(`${import.meta.env.VITE_APP_HOST}/product/get-products`).then(response => {
+    // console.log(response.data.products)
+    setProducts(response.data.products);
+  })
+
   return (
     <FullWidthLayout>
       <Options />

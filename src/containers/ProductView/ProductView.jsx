@@ -1,6 +1,7 @@
 import FullWidthLayout from "../../layouts/FullWidthLayout";
 import './ProductView.scss';
-
+import { useState } from 'react';
+import Axios from 'axios';
 
 
 const ProductView = () => {
@@ -9,10 +10,17 @@ const ProductView = () => {
         id: 1,
         name: "Zapatilla Saucony Axon 3",
         price: 70000,
-        img: './img/prod-test.jpg',
+        img: '../img/prod-test.jpg',
         sizes: [7, 8, 8.5, 9, 9.5, 10, 10.5],
         description: 'Zapatillas de Running hombre, están re chetas, compralas'
     };
+
+    // const [product, setProduct] = useState({})
+
+    Axios.get(`${import.meta.env.VITE_APP_HOST}/product/:id`).then(response => {
+        console.log(response.data)
+        // setProduct(response.data.products);
+    })
 
 
     const sizes = product.sizes;
