@@ -5,10 +5,15 @@ import Logo from "../../../public/logo/logo.png";
 import "./Auth.scss";
 import Axios from 'axios';
 import { toast } from "sonner";
+import { fetchUserData } from "../../redux/actions/users/userAction";
+import { useDispatch } from "react-redux";
+
+
 
 const Login = () => {
-
   const navigate = useNavigate();
+
+  const dispatch = useDispatch();
 
   const [formData, setFormData] = useState({
     email: "",
@@ -21,31 +26,23 @@ const Login = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    e.preventDefault();
     setLoading(true);
-    Axios.post(`${import.meta.env.VITE_APP_HOST}/api/jwt/create/`, formData, { withCredentials: true }).then(response => {
+
+    Axios.post(`${import.meta.env.VITE_APP_HOST}/jwt/create/`, formData, { withCredentials: true }).then(async response => {
       if (response.status === 200) {
         toast.success('Sesión iniciada');
         console.log(response.data)
-        // navigate('/');
+        await fetchUserData(dispatch);
       }
-
     }).catch(error => {
       toast.error('Error al iniciar sesión');
-      // Manejar errores aquí
-      if (error.response) {
-        console.log(error.response.data);
-      }
-      // setErrors(error.response.data)
+      console.log('ERROR------------------' + error);
     }).finally(() => {
-      // Este bloque se ejecutará sin importar si la solicitud fue exitosa o falló
-
-      // setFormData({ first_name: "", last_name: "", email: "", password: "", re_password: "" });
+      navigate('/');
+      setFormData({ first_name: "", last_name: "", email: "", password: "", re_password: "" });
       setLoading(false);
     });
 

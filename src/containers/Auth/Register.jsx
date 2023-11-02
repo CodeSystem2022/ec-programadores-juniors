@@ -30,7 +30,7 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    Axios.post(`${import.meta.env.VITE_APP_HOST}/api/users/`, formData).then(response => {
+    Axios.post(`${import.meta.env.VITE_APP_HOST}/users/`, formData).then(response => {
       if (response.status === 201) {
         toast.success('Usuario creado con éxito');
         navigate('/login');
