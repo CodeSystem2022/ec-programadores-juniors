@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { unsetUser } from "../../redux/reducers/userSlice";
+
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -20,6 +23,10 @@ const NavbarComponent = () => {
   const [showSearchBar, setShowSearchBar] = useState(false);
   const [showCart, setShowCart] = useState(false);
 
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.user);
+  const navigate = useNavigate();
+
   const handleSearchIconClick = () => {
     setShowSearchBar(true);
   };
@@ -34,6 +41,14 @@ const NavbarComponent = () => {
   const handleCloseCart = () => {
     setShowCart(false);
   };
+
+  const handleLogout = () => {
+    dispatch(unsetUser());
+    localStorage.removeItem("user");
+    navigate("/");
+  };
+
+  const isUserLoggedIn = localStorage.getItem("user");
 
   return (
     <div className="nav-container">
@@ -68,7 +83,10 @@ const NavbarComponent = () => {
                   title={
                     <div className=" d-flex justify-content-between align-items-center">
                       <p className="nav-text">Destacados</p>
-                      <FontAwesomeIcon icon={faChevronDown} className="chevron-icon"/>
+                      <FontAwesomeIcon
+                        icon={faChevronDown}
+                        className="chevron-icon"
+                      />
                     </div>
                   }
                   id={`offcanvasNavbarDropdown-expand-lg`}
@@ -90,7 +108,10 @@ const NavbarComponent = () => {
                   title={
                     <div className="d-flex justify-content-between align-items-center">
                       <p className="nav-text">Mujer</p>
-                      <FontAwesomeIcon icon={faChevronDown} className="chevron-icon"/>
+                      <FontAwesomeIcon
+                        icon={faChevronDown}
+                        className="chevron-icon"
+                      />
                     </div>
                   }
                   id={`offcanvasNavbarDropdown-expand-lg`}
@@ -112,7 +133,10 @@ const NavbarComponent = () => {
                   title={
                     <div className="d-flex justify-content-between align-items-center">
                       <p className="nav-text">Hombre</p>
-                      <FontAwesomeIcon icon={faChevronDown} className="chevron-icon"/>
+                      <FontAwesomeIcon
+                        icon={faChevronDown}
+                        className="chevron-icon"
+                      />
                     </div>
                   }
                   id={`offcanvasNavbarDropdown-expand-lg`}
@@ -134,7 +158,10 @@ const NavbarComponent = () => {
                   title={
                     <div className="d-flex justify-content-between align-items-center">
                       <p className="nav-text">Niño/a</p>
-                      <FontAwesomeIcon icon={faChevronDown} className="chevron-icon"/>
+                      <FontAwesomeIcon
+                        icon={faChevronDown}
+                        className="chevron-icon"
+                      />
                     </div>
                   }
                   id={`offcanvasNavbarDropdown-expand-lg`}
@@ -155,12 +182,25 @@ const NavbarComponent = () => {
                 <Nav.Link className="nav-link" href="#action1">
                   Accesorios
                 </Nav.Link>
-                <Nav.Link className="nav-link" href="#action2">
-                  Mi Cuenta
-                </Nav.Link>
-                <Nav.Link className="nav-link" href="#action2">
-                  Salir
-                </Nav.Link>
+                {isUserLoggedIn ? (
+                  <>
+                    <Nav.Link className="nav-link" href="#action2">
+                      Mi Cuenta
+                    </Nav.Link>
+                    <Nav.Link className="nav-link" onClick={handleLogout}>
+                      Salir
+                    </Nav.Link>
+                  </>
+                ) : (
+                  <>
+                    <Nav.Link className="nav-link" href="/login">
+                      Iniciar Sesión
+                    </Nav.Link>
+                    <Nav.Link className="nav-link" href="/register">
+                      Registrarse
+                    </Nav.Link>
+                  </>
+                )}
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
