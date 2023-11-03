@@ -3,10 +3,10 @@ import "./assets/styles/App.scss";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
-
 // Containers Page
 import Home from "./containers/Home/Home";
 import Contact from "./containers/Contact/Contact";
+import Account from "./containers/Account/Account";
 import Login from "./containers/Auth/Login";
 import Help from "./containers/Help/Help";
 import Error404 from "./containers/errors/Error404";
@@ -18,7 +18,6 @@ import Activation from "./containers/Activation/Activation";
 import { useEffect } from "react";
 import { setUser } from "./redux/reducers/userSlice";
 import ReduxProvider from "./ReduxProvider/ReduxProvider";
-
 
 function App() {
   const dispatch = useDispatch();
@@ -32,9 +31,7 @@ function App() {
     }
   }, []);
 
-
   return (
-
     <Router>
       <Routes>
         {/* Error 404 */}
@@ -42,6 +39,9 @@ function App() {
 
         {/* Home */}
         <Route path="/" element={<Home />} />
+
+        {/* Account */}
+        <Route path="/account" element={<Account />} />
 
         {/* Login */}
         <Route path="/login" element={<Login />} />
@@ -68,8 +68,7 @@ function App() {
         <Route path="/activation/:uid/:token" element={<Activation />} />
       </Routes>
     </Router>
-
-  )
+  );
 }
 
 export default function AppWithRedux() {

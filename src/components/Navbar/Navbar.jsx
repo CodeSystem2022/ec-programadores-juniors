@@ -184,7 +184,7 @@ const NavbarComponent = () => {
                 </Nav.Link>
                 {isUserLoggedIn ? (
                   <>
-                    <Nav.Link className="nav-link" href="#action2">
+                    <Nav.Link className="nav-link" href="/account">
                       Mi Cuenta
                     </Nav.Link>
                     <Nav.Link className="nav-link" onClick={handleLogout}>
