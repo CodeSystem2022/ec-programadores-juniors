@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { unsetUser } from "../../redux/reducers/userSlice";
-
+import { logoutUser } from "../../redux/actions/users/userAction";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -43,8 +42,7 @@ const NavbarComponent = () => {
   };
 
   const handleLogout = () => {
-    dispatch(unsetUser());
-    localStorage.removeItem("user");
+    dispatch(logoutUser());
     navigate("/");
   };
 
