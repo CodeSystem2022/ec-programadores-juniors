@@ -1,23 +1,33 @@
+// Acá se configura el store 
 import { configureStore } from "@reduxjs/toolkit";
-import { persistStore, persistReducer } from "redux-persist";
+
+// permite almacenar los valores de manera local
 import storage from "redux-persist/lib/storage";
-// funcion que permite crear el store
+// multiples reducers
+import { combineReducers } from "@reduxjs/toolkit";
+// para almacenar reducers
+import { persistReducer } from "redux-persist";
+// midleware que comunica toolkit con persist
+import thunk from "redux-thunk";
 // Reducers
-import userReducer from '../redux/reducers/userSlice'
+import userReducer from '../redux/reducers/userSlice';
+import cartReducer from '../redux/reducers/cartSlice';
 
 const persistConfig = {
     key: 'root',
     storage,
+    whitelist: ['cart', 'user']
 };
 
-const persistedReducer = persistReducer(persistConfig, userReducer);
-
-const store = configureStore({
-    reducer: {
-        user: persistedReducer,
-    }
+// obj que almacena los reducers a persistir
+const rootReducer = combineReducers({
+    cart: cartReducer,
+    user: userReducer,
 })
 
-const persistor = persistStore(store);
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-export { store, persistor };
+export const store = configureStore({
+    reducer: persistedReducer,
+    middleware: [thunk]
+})
