@@ -18,6 +18,7 @@ import Activation from "./containers/Activation/Activation";
 import { useEffect } from "react";
 import { setUser } from "./redux/reducers/userSlice";
 import ReduxProvider from "./ReduxProvider/ReduxProvider";
+import Checkout from "./containers/Checkout/Checkout";
 
 function App() {
   const dispatch = useDispatch();
@@ -66,6 +67,9 @@ function App() {
 
         {/* Activacion */}
         <Route path="/activation/:uid/:token" element={<Activation />} />
+        
+        {/* Checkout */}
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </Router>
   );

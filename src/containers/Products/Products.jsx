@@ -10,6 +10,8 @@ const Products = () => {
   Axios.get(`${import.meta.env.VITE_APP_HOST}/product/get-products`).then(response => {
     // console.log(response.data.products)
     setProducts(response.data.products);
+  }).catch(e => {
+    console.log(e);
   })
 
   return (
