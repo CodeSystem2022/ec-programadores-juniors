@@ -21,14 +21,10 @@ export const fetchUserData = async (dispatch) => {
 
 export const logoutUser = () => async (dispatch) => {
   try {
-    const res = await Axios.post(
-      `${import.meta.env.VITE_APP_HOST}/users/logout`,
-      { withCredentials: true }
-    );
-    if (res.status === 200) {
-      localStorage.removeItem("user");
+    const res = await Axios.post(`${import.meta.env.VITE_APP_HOST}/logout/`);
+    if (res.status === 204) {
       dispatch(unsetUser());
-    }
+      localStorage.removeItem("user");    }
   } catch (error) {
     console.error("Error al realizar la solicitud de cierre de sesión:", error);
   }
