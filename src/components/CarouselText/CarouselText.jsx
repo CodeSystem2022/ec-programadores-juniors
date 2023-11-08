@@ -7,21 +7,21 @@ const CarouselText = () => {
                 <div className='bg-box'></div>
                 <Carousel.Caption>
                     <p className='csl-txt'>
-                        Cuotas sin interés con todos los bancos.
+                        Cuotas sin interés con todos los bancos
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
                 <div className='bg-box'></div>
                 <Carousel.Caption>
-                    <p className='csl-txt'>Promociones bancarias con bancos seleccionados</p>
+                    <p className='csl-txt'>Promociones con bancos seleccionados</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
                 <div className='bg-box'></div>
                 <Carousel.Caption>
                     <p className='csl-txt'>
-                        Envios a todo el pais
+                        Envíos a todo el país
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>

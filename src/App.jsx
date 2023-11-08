@@ -1,12 +1,12 @@
 import "./assets/styles/App.scss";
 // Rutas
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Provider } from "react-redux";
-import store from "./store.js";
+import { useDispatch } from "react-redux";
 
 // Containers Page
 import Home from "./containers/Home/Home";
 import Contact from "./containers/Contact/Contact";
+import Account from "./containers/Account/Account";
 import Login from "./containers/Auth/Login";
 import Help from "./containers/Help/Help";
 import Error404 from "./containers/errors/Error404";
@@ -14,44 +14,71 @@ import Register from "./containers/Auth/Register";
 import About from "./containers/About/About";
 import Products from "./containers/Products/Products";
 import ProductView from "./containers/ProductView/ProductView";
-
+import Activation from "./containers/Activation/Activation";
+import { useEffect } from "react";
+import { setUser } from "./redux/reducers/userSlice";
+import ReduxProvider from "./ReduxProvider/ReduxProvider";
+import Checkout from "./containers/Checkout/Checkout";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    // Comprobar si hay datos de usuario en localStorage
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      // Si existen datos de usuario, cargarlos en el estado de Redux
+      dispatch(setUser(JSON.parse(storedUser)));
+    }
+  }, []);
+
   return (
-    <Provider store={store}>
-      <Router>
-        <Routes>
-          {/* Error 404 */}
-          <Route path="*" element={<Error404 />} />
+    <Router>
+      <Routes>
+        {/* Error 404 */}
+        <Route path="*" element={<Error404 />} />
 
-          {/* Home */}
-          <Route path="/" element={<Home />} />
+        {/* Home */}
+        <Route path="/" element={<Home />} />
 
-          {/* Login */}
-          <Route path="/login" element={<Login />} />
+        {/* Account */}
+        <Route path="/account" element={<Account />} />
 
-          {/* Register */}
-          <Route path="/register" element={<Register />} />
+        {/* Login */}
+        <Route path="/login" element={<Login />} />
 
-          {/* About */}
-          <Route path="/about" element={<About />} />
+        {/* Register */}
+        <Route path="/register" element={<Register />} />
 
-          {/* Contacto */}
-          <Route path="/contact" element={<Contact />} />
+        {/* About */}
+        <Route path="/about" element={<About />} />
 
-          {/* Help */}
-          <Route path="/help" element={<Help />} />
+        {/* Contacto */}
+        <Route path="/contact" element={<Contact />} />
 
-          {/* Vista cards de productos */}
-          <Route path="/products" element={<Products />} />
+        {/* Help */}
+        <Route path="/help" element={<Help />} />
 
-          {/* Vista de un producto */}
-          <Route path="/product" element={<ProductView />} />
+        {/* Vista cards de productos */}
+        <Route path="/products" element={<Products />} />
 
-        </Routes>
-      </Router>
-    </Provider>
+        {/* Vista de un producto */}
+        <Route path="/product/:id" element={<ProductView />} />
+
+        {/* Activacion */}
+        <Route path="/activation/:uid/:token" element={<Activation />} />
+        
+        {/* Checkout */}
+        <Route path="/checkout" element={<Checkout />} />
+      </Routes>
+    </Router>
   );
 }
 
-export default App;
+export default function AppWithRedux() {
+  return (
+    <ReduxProvider>
+      <App />
+    </ReduxProvider>
+  );
+}
