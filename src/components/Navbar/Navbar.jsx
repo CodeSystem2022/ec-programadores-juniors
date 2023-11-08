@@ -17,6 +17,8 @@ import {
 
 import SearchBar from "./Searchbar/Searchbar";
 import Cart from "./Cart/Cart";
+import Logo from '/logo/sportblend-logo.png';
+
 
 const NavbarComponent = () => {
   const [showSearchBar, setShowSearchBar] = useState(false);
@@ -52,7 +54,7 @@ const NavbarComponent = () => {
   return (
     <div className="nav-container">
       <Navbar.Brand className="navbar-brand-laptop" href="/">
-        <img className="img-logo" src="./logo/sportblend-logo.png" alt="logo" />
+        <img className="img-logo" src={Logo} alt="logo" />
       </Navbar.Brand>
       <Navbar key="lg" expand="lg" className="navbar">
         <Container fluid>
@@ -69,7 +71,7 @@ const NavbarComponent = () => {
               >
                 <img
                   className="img-logo"
-                  src="./logo/sportblend-logo.png"
+                  src={Logo}
                   alt="logo"
                 />
               </Offcanvas.Title>
@@ -77,32 +79,7 @@ const NavbarComponent = () => {
 
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1">
-                <NavDropdown
-                  className="dropdown-tg"
-                  title={
-                    <div className=" d-flex justify-content-between align-items-center">
-                      <p className="nav-text">Destacados</p>
-                      <FontAwesomeIcon
-                        icon={faChevronDown}
-                        className="chevron-icon"
-                      />
-                    </div>
-                  }
-                  id={`offcanvasNavbarDropdown-expand-lg`}
-                >
-                  <NavDropdown.Item className="navDropdown" href="#action3">
-                    Calzado
-                  </NavDropdown.Item>
-                  <NavDropdown.Item className="navDropdown" href="#action4">
-                    Indumentaria
-                  </NavDropdown.Item>
-                  <NavDropdown.Item
-                    className="view-all navDropdown"
-                    href="#action5"
-                  >
-                    Ver Todo
-                  </NavDropdown.Item>
-                </NavDropdown>
+                
                 <NavDropdown
                   title={
                     <div className="d-flex justify-content-between align-items-center">
@@ -115,15 +92,15 @@ const NavbarComponent = () => {
                   }
                   id={`offcanvasNavbarDropdown-expand-lg`}
                 >
-                  <NavDropdown.Item href="#action3" className="navDropdown">
+                  <NavDropdown.Item href="/products/mujer/calzado" className="navDropdown">
                     Calzado
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action4" className="navDropdown">
+                  <NavDropdown.Item href="/products/mujer/indumentaria" className="navDropdown">
                     Indumentaria
                   </NavDropdown.Item>
                   <NavDropdown.Item
                     className="view-all navDropdown"
-                    href="#action5"
+                    href="/mujer"
                   >
                     Ver Todo
                   </NavDropdown.Item>
@@ -140,15 +117,15 @@ const NavbarComponent = () => {
                   }
                   id={`offcanvasNavbarDropdown-expand-lg`}
                 >
-                  <NavDropdown.Item className="navDropdown" href="#action3">
+                  <NavDropdown.Item className="navDropdown" href="/products/hombre/calzado">
                     Calzado
                   </NavDropdown.Item>
-                  <NavDropdown.Item className="navDropdown" href="#action4">
+                  <NavDropdown.Item className="navDropdown" href="/products/hombre/indumentaria">
                     Indumentaria
                   </NavDropdown.Item>
                   <NavDropdown.Item
                     className="view-all navDropdown"
-                    href="#action5"
+                    href="/hombre"
                   >
                     Ver Todo
                   </NavDropdown.Item>
@@ -165,20 +142,20 @@ const NavbarComponent = () => {
                   }
                   id={`offcanvasNavbarDropdown-expand-lg`}
                 >
-                  <NavDropdown.Item className="navDropdown" href="#action3">
+                  <NavDropdown.Item className="navDropdown" href="/products/niño/calzado">
                     Calzado
                   </NavDropdown.Item>
-                  <NavDropdown.Item className="navDropdown" href="#action4">
+                  <NavDropdown.Item className="navDropdown" href="/products/niño/indumentaria">
                     Indumentaria
                   </NavDropdown.Item>
                   <NavDropdown.Item
                     className="view-all navDropdown"
-                    href="#action5"
+                    href="/niño"
                   >
                     Ver Todo
                   </NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link className="nav-link" href="#action1">
+                <Nav.Link className="nav-link" href="/accesorios">
                   Accesorios
                 </Nav.Link>
                 {isUserLoggedIn ? (
@@ -207,7 +184,7 @@ const NavbarComponent = () => {
       </Navbar>
 
       <Navbar.Brand className="navbar-brand" href="./">
-        <img className="img-logo" src="./logo/sportblend-logo.png" alt="logo" />
+        <img className="img-logo" src={Logo} alt="logo" />
       </Navbar.Brand>
       <div className="icons-container">
         <Link onClick={handleCartIconClick}>

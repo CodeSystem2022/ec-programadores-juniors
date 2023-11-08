@@ -34,7 +34,7 @@ const ProductsCarousel = () => {
               <SimpleProduct
                 name={product.name}
                 price={product.price}
-                img={product.img}
+                img={product.photo}
               />
             </Carousel.Caption>
           </Link>

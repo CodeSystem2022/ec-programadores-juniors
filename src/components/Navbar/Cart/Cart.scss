@@ -1,3 +1,38 @@
+@import "../../../scss/extend.scss";
+
+.cart-item-box {
+    @extend %flex-between-center;
+    width: 100%;
+    padding: 15px 0;
+    border-bottom:1px solid var(--dark-blue);
+}
+
 .product-image {
     width: 5%;
+}
+
+.cart-product-title {
+    font-size: 14px;
+    margin: 0;
+}
+
+.cart-product-price {
+    font-size: 16px;
+    margin: 0;
+    color: var(--sad-red);
+}
+
+.remove-button {
+    padding:0 5px;
+    border-radius: 4px;
+    margin: 0;
+    background-color: var(--dark-blue);
+}
+
+.buy-button {
+    background-color: var(--sad-red);
+    color: var(--white);
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-decoration: none;
 }

@@ -72,7 +72,7 @@ const ProductView = () => {
           }/payment/create-checkout-session`}
           method="POST"
         >
-          <button type="submit">Comprar ahora</button>
+          <button className="add-button" type="submit">Comprar ahora</button>
         </form>
 
         <h5>Descripción</h5>
