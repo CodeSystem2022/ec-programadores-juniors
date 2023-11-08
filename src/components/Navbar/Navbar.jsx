@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { logoutUser } from "../../redux/actions/users/userAction";
-import { unsetUser } from "../../redux/reducers/userSlice";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -44,15 +43,15 @@ const NavbarComponent = () => {
 
   const handleLogout = () => {
     dispatch(logoutUser());
-    // dispatch(unsetUser());
     navigate("/");
+    window.location.reload();
   };
 
   const isUserLoggedIn = localStorage.getItem("user");
 
   return (
     <div className="nav-container">
-      <Navbar.Brand className="navbar-brand-laptop" href="./">
+      <Navbar.Brand className="navbar-brand-laptop" href="/">
         <img className="img-logo" src="./logo/sportblend-logo.png" alt="logo" />
       </Navbar.Brand>
       <Navbar key="lg" expand="lg" className="navbar">

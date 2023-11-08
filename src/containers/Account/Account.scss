@@ -1,6 +1,12 @@
 .account-container {
   display: flex;
+  padding: 20px 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 45vh;
+}
+
+.user-container {
+  margin: auto;
 }

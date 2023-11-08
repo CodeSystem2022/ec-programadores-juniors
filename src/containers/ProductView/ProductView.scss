@@ -2,6 +2,9 @@
 
 .product-container {
   margin: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .product-img {
@@ -51,10 +54,11 @@
 }
 
 .add-button {
-  width: 80%;
   border-radius: 4px;
 }
 
-
-
-
+@media screen and (min-width: 1024px) {
+  .product-img {
+    max-width: 400px;
+  }
+}

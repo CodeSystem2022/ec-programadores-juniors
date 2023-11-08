@@ -1,41 +1,49 @@
 .home-img {
-    width: 100%;
+  width: 100%;
 }
 
 .home-h1 {
-    margin: 20px 15px;
-    font-weight: bold;
-    color: var(--black-color);
+  margin: 20px 15px;
+  font-weight: bold;
+  color: var(--black-color);
 }
 
 .home-h2 {
-    margin: 20px 15px 0 15px;
+  margin: 20px 15px 0 15px;
 }
 
 .section-text {
-    margin-left: 15px;
+  margin-left: 15px;
 }
 
 .gender-div {
-    margin-bottom: 40px;
-   
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .gender-title {
-    font-size: 18px;
-    margin-left: 20px;
+  font-size: 18px;
+  margin-left: 20px;
 }
 
 .gender-img {
-    width: 100%;
+  width: 100%;
 }
 
 .gender-link {
-    width: 40%;
-    margin-top: 20px;
-    color: var(--white);
-    text-decoration: none;
-    background-color: var(--sad-red);
-    padding: 10px 60px;
-    border-radius: 4px;
+  margin-top: 20px;
+  color: var(--white);
+  text-decoration: none;
+  background-color: var(--sad-red);
+  padding: 10px 60px;
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 1024px) {
+  .gender-img {
+    max-width: 1200px;
+  }
 }

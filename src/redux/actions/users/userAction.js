@@ -1,6 +1,7 @@
 // userActions.js
 import Axios from "axios";
 import { setUser, unsetUser } from "../../reducers/userSlice";
+import Cookies from 'js-cookie';
 
 // Función para obtener los datos del usuario
 export const fetchUserData = async (dispatch) => {
@@ -21,10 +22,11 @@ export const fetchUserData = async (dispatch) => {
 
 export const logoutUser = () => async (dispatch) => {
   try {
-    const res = await Axios.post(`${import.meta.env.VITE_APP_HOST}/logout/`);
-    if (res.status === 204) {
-      dispatch(unsetUser());
-      localStorage.removeItem("user");    }
+    Cookies.remove("access");
+    Cookies.remove("refresh");
+    localStorage.removeItem("user");
+    dispatch(unsetUser());
+    window.location.reload();
   } catch (error) {
     console.error("Error al realizar la solicitud de cierre de sesión:", error);
   }
