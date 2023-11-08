@@ -13,6 +13,7 @@ import Error404 from "./containers/errors/Error404";
 import Register from "./containers/Auth/Register";
 import About from "./containers/About/About";
 import Products from "./containers/Products/Products";
+import ProductsByGender from "./containers/Products/ProductsByGender";
 import ProductView from "./containers/ProductView/ProductView";
 import Activation from "./containers/Activation/Activation";
 import { useEffect } from "react";
@@ -59,8 +60,11 @@ function App() {
         {/* Help */}
         <Route path="/help" element={<Help />} />
 
-        {/* Vista cards de productos */}
-        <Route path="/products" element={<Products />} />
+        {/* Vista cards de productos*/}
+         <Route path="products/:gender" element={<Products />} /> 
+        
+          {/* Vista cards de productos */}
+        <Route path="/products/:gender/:category" element={<ProductsByGender />} />
 
         {/* Vista de un producto */}
         <Route path="/product/:id" element={<ProductView />} />

@@ -41,15 +41,15 @@ const SearchBar = ({ show, handleClose }) => {
         {cartProducts && cartProducts.length > 0 ? (
           <>
             {cartProducts.map((product, key) => (
-              <div className='d-flex justify-content-around align-items-center' key={key}>
+              <div className='cart-item-box' key={key}>
                 <img className='product-image' src={product.photo} />
-                <h5 className='product-title'>{product.name}</h5>
-                <h5 className='product-price'>$ {product.price}</h5>
-                <button onClick={() => handleClick(product.id)} className='remove-button'>-</button>
+                <h5 className='cart-product-title'>{product.name}</h5>
+                <h5 className='cart-product-price'>$ {product.price}</h5>
+                <button  onClick={() => handleClick(product.id)} className='remove-button'>-</button>
               </div>
             ))}
-            <div>
-              <Link className='' to='/checkout'>Comprar</Link>
+            <div className='d-flex justify-content-end mt-4 w-100'>
+              <Link className='buy-button' to='/checkout'>Comprar</Link>
             </div>
           </>
         ) : (

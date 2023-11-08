@@ -92,15 +92,15 @@ const NavbarComponent = () => {
                   }
                   id={`offcanvasNavbarDropdown-expand-lg`}
                 >
-                  <NavDropdown.Item href="/calzado/mujer" className="navDropdown">
+                  <NavDropdown.Item href="/products/mujer/calzado" className="navDropdown">
                     Calzado
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="/indumentaria/mujer" className="navDropdown">
+                  <NavDropdown.Item href="/products/mujer/indumentaria" className="navDropdown">
                     Indumentaria
                   </NavDropdown.Item>
                   <NavDropdown.Item
                     className="view-all navDropdown"
-                    href="/products"
+                    href="/mujer"
                   >
                     Ver Todo
                   </NavDropdown.Item>
@@ -117,15 +117,15 @@ const NavbarComponent = () => {
                   }
                   id={`offcanvasNavbarDropdown-expand-lg`}
                 >
-                  <NavDropdown.Item className="navDropdown" href="/calzado/hombre">
+                  <NavDropdown.Item className="navDropdown" href="/products/hombre/calzado">
                     Calzado
                   </NavDropdown.Item>
-                  <NavDropdown.Item className="navDropdown" href="/indumentaria/hombre">
+                  <NavDropdown.Item className="navDropdown" href="/products/hombre/indumentaria">
                     Indumentaria
                   </NavDropdown.Item>
                   <NavDropdown.Item
                     className="view-all navDropdown"
-                    href="/products"
+                    href="/hombre"
                   >
                     Ver Todo
                   </NavDropdown.Item>
@@ -142,15 +142,15 @@ const NavbarComponent = () => {
                   }
                   id={`offcanvasNavbarDropdown-expand-lg`}
                 >
-                  <NavDropdown.Item className="navDropdown" href="/calzado/niño">
+                  <NavDropdown.Item className="navDropdown" href="/products/niño/calzado">
                     Calzado
                   </NavDropdown.Item>
-                  <NavDropdown.Item className="navDropdown" href="/indumentaria/niño">
+                  <NavDropdown.Item className="navDropdown" href="/products/niño/indumentaria">
                     Indumentaria
                   </NavDropdown.Item>
                   <NavDropdown.Item
                     className="view-all navDropdown"
-                    href="/products"
+                    href="/niño"
                   >
                     Ver Todo
                   </NavDropdown.Item>
