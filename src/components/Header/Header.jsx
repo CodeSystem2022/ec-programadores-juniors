@@ -1,4 +1,4 @@
-import CarouselText from "../../components/CarouselText/CarouselText.JSX"
+import CarouselText from "../../components/CarouselText/CarouselText.jsx"
 import NavbarComponent from "../Navbar/Navbar"
 import ShippingLine from "../ShippingLine/ShippingLine"
 
