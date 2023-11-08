@@ -49,7 +49,7 @@ const Home = () => {
           </h2>
           <p className="section-text">Lo mejor del calzado e indumentaria</p>
         </div>
-        <ProductsCarousel />
+     
       </section>
 
       <section className="genders-section">
