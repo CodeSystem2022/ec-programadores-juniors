@@ -1,11 +1,7 @@
 import React from "react";
 import FullWidthLayout from "../../layouts/FullWidthLayout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCartShopping,
-  faMagnifyingGlass,
-  faChevronDown,
-} from "@fortawesome/free-solid-svg-icons";
+import { faUser, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import "./Account.scss";
 
 const Account = () => {
@@ -17,18 +13,13 @@ const Account = () => {
         <h1>Mi Cuenta</h1>
         {user && (
           <div className="user-container">
-            {" "}
             <p>
-              <FontAwesomeIcon className="nav-icon" icon={faMagnifyingGlass} />
+              <FontAwesomeIcon className="nav-icon" icon={faUser} />{" "}
               {user.first_name} {user.last_name}
             </p>
             <p>
-              <FontAwesomeIcon className="nav-icon" icon={faMagnifyingGlass} />
-              Email: {user.email}
-            </p>
-            <p>
-              <FontAwesomeIcon className="nav-icon" icon={faMagnifyingGlass} />
-              Dirección:{" "}
+              <FontAwesomeIcon className="nav-icon" icon={faEnvelope} /> Email:{" "}
+              {user.email}
             </p>
           </div>
         )}

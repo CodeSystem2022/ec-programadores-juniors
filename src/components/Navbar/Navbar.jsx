@@ -44,13 +44,14 @@ const NavbarComponent = () => {
   const handleLogout = () => {
     dispatch(logoutUser());
     navigate("/");
+    window.location.reload();
   };
 
   const isUserLoggedIn = localStorage.getItem("user");
 
   return (
     <div className="nav-container">
-      <Navbar.Brand className="navbar-brand-laptop" href="./">
+      <Navbar.Brand className="navbar-brand-laptop" href="/">
         <img className="img-logo" src="./logo/sportblend-logo.png" alt="logo" />
       </Navbar.Brand>
       <Navbar key="lg" expand="lg" className="navbar">

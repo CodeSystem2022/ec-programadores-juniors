@@ -17,7 +17,17 @@ const Home = () => {
 
     if (query.get("canceled") && !toastDisplayed) {
       toast.error("No se pudo comprar el producto");
-      setToastDisplayed(true); 
+      setToastDisplayed(true);
+    }
+
+    if (query.get("error") && !toastDisplayed) {
+      toast.error("Error al Iniciar Sesión");
+      setToastDisplayed(true);
+    }
+
+    if (query.get("login") && !toastDisplayed) {
+      toast.error("Bienvenido");
+      setToastDisplayed(true);
     }
   }, [query, toastDisplayed]);
 
@@ -33,11 +43,12 @@ const Home = () => {
 
       <section className="second-section">
         <img className="home-img" src="./img/image2.jpeg" alt="home-image 2" />
-        <h2 className="home-h2 text-start">
-          MODA <br /> SPORTBLEND
-        </h2>
-        <p className="section-text">Lo mejordel calzado e indumentaria</p>
-
+        <div className="carousel-text">
+          <h2 className="home-h2 text-start">
+            MODA <br /> SPORTBLEND
+          </h2>
+          <p className="section-text">Lo mejor del calzado e indumentaria</p>
+        </div>
         <ProductsCarousel />
       </section>
 

@@ -3,6 +3,7 @@ import Carousel from "react-bootstrap/Carousel";
 import SimpleProduct from "../SimpleProductComp/SimpleProduct";
 import "./ProductsCarousel.scss";
 import Axios from "axios";
+import { Link } from "react-router-dom";
 
 const ProductsCarousel = () => {
   const [products, setProducts] = useState([]);
@@ -27,14 +28,16 @@ const ProductsCarousel = () => {
     <Carousel>
       {products.map((product, index) => (
         <Carousel.Item key={index}>
-          <div className="simprod-box"></div>
-          <Carousel.Caption>
-            <SimpleProduct
-              name={product.name}
-              price={product.price}
-              img={product.img}
-            />
-          </Carousel.Caption>
+          <Link to={`/product/${product.id}`}>
+            <div className="simprod-box"></div>
+            <Carousel.Caption>
+              <SimpleProduct
+                name={product.name}
+                price={product.price}
+                img={product.img}
+              />
+            </Carousel.Caption>
+          </Link>
         </Carousel.Item>
       ))}
     </Carousel>

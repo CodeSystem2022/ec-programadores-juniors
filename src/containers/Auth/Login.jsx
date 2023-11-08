@@ -3,12 +3,10 @@ import { Link, useNavigate } from "react-router-dom";
 import FullWidthLayout from "../../layouts/FullWidthLayout";
 import Logo from "../../../public/logo/logo.png";
 import "./Auth.scss";
-import Axios from 'axios';
+import Axios from "axios";
 import { toast } from "sonner";
 import { fetchUserData } from "../../redux/actions/users/userAction";
 import { useDispatch } from "react-redux";
-
-
 
 const Login = () => {
   const navigate = useNavigate();
@@ -28,25 +26,27 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     setLoading(true);
 
-    Axios.post(`${import.meta.env.VITE_APP_HOST}/jwt/create/`, formData, { withCredentials: true }).then(async response => {
-      if (response.status === 200) {
-        toast.success('Sesión iniciada');
-        console.log(response.data)
-        await fetchUserData(dispatch);
-      }
-    }).catch(error => {
-      toast.error('Error al iniciar sesión');
-      console.log('ERROR------------------' + error);
-    }).finally(() => {
-      navigate('/');
-      setLoading(false);
-    });
-
+    Axios.post(`${import.meta.env.VITE_APP_HOST}/jwt/create/`, formData, {
+      withCredentials: true,
+    })
+      .then(async (response) => {
+        if (response.status === 200) {
+          toast.success("Sesión iniciada");
+          console.log(response.data);
+          await fetchUserData(dispatch);
+          navigate("/?login=success");
+        }
+      })
+      .catch((error) => {
+        toast.error("Error al iniciar sesión");
+        console.log("ERROR------------------" + error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
-
 
   return (
     <FullWidthLayout>
@@ -78,7 +78,10 @@ const Login = () => {
                 required
               />
             </div>
-            <button type="submit" disabled={loading}> {loading ? 'Loading...' : 'Ingresar'}</button>
+            <button type="submit" disabled={loading}>
+              {" "}
+              {loading ? "Loading..." : "Ingresar"}
+            </button>
 
             <Link className="login-link">¿Olvidaste tu contraseña?</Link>
             <div className="have-account">

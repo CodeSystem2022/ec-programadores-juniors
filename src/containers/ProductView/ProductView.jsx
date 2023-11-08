@@ -14,6 +14,9 @@ const ProductView = () => {
 
   const [product, setProduct] = useState(null);
 
+  const [selectedSize, setSelectedSize] = useState([]);
+
+
   useEffect(() => {
     Axios.get(`${import.meta.env.VITE_APP_HOST}/product/product/${id}`).then(
       (response) => {
@@ -21,7 +24,6 @@ const ProductView = () => {
         setProduct(response.data.product);
       }
     );
-
   }, [id]);
 
   const handleClick = () => {
@@ -34,7 +36,6 @@ const ProductView = () => {
     }
   };
 
-  const [selectedSize, setSelectedSize] = useState([]);
 
   // console.log(selectedSize);
 
@@ -65,17 +66,17 @@ const ProductView = () => {
         <button onClick={() => handleClick(product)} className="add-button">
           Agregar al carrito
         </button>
-
-        <h5>Descripción</h5>
-        <p>{product?.description}</p>
         <form
           action={`${
             import.meta.env.VITE_APP_HOST
           }/payment/create-checkout-session`}
           method="POST"
         >
-          <button type="submit">Checkout</button>
+          <button type="submit">Comprar ahora</button>
         </form>
+
+        <h5>Descripción</h5>
+        <p>{product?.description}</p>
       </div>
     </FullWidthLayout>
   );
