@@ -183,7 +183,7 @@ const NavbarComponent = () => {
         </Container>
       </Navbar>
 
-      <Navbar.Brand className="navbar-brand" href="./">
+      <Navbar.Brand className="navbar-brand" href="/">
         <img className="img-logo" src={Logo} alt="logo" />
       </Navbar.Brand>
       <div className="icons-container">
