@@ -50,7 +50,15 @@
   text-decoration: none;
 }
 
+.cart-icon {
+  font-size: 40px;
+}
+
 @media screen and (min-width: 1024px) {
+  .cart-side-bar {
+    width: 30% !important;
+  }
+
   .cart-title {
     margin: auto;
   }

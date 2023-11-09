@@ -2,18 +2,18 @@ import React from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-import { useDispatch, useSelector } from 'react-redux';
-import { removeProduct } from '../../../redux/reducers/cartSlice';
-import './Cart.scss';
+import { useDispatch, useSelector } from "react-redux";
+import { removeProduct } from "../../../redux/reducers/cartSlice";
+import "./Cart.scss";
 import { Link } from "react-router-dom";
 
 const SearchBar = ({ show, handleClose }) => {
   const dispatch = useDispatch();
-  const cartProducts = useSelector(state => state.cart); //traigo los products de cart si hay
+  const cartProducts = useSelector((state) => state.cart); //traigo los products de cart si hay
 
-  const handleClick = id => {
+  const handleClick = (id) => {
     dispatch(removeProduct(id));
-  }
+  };
 
   return (
     <Offcanvas
@@ -41,20 +41,29 @@ const SearchBar = ({ show, handleClose }) => {
         {cartProducts && cartProducts.length > 0 ? (
           <>
             {cartProducts.map((product, key) => (
-              <div className='cart-item-box' key={key}>
-                <img className='product-image' src={product.photo} />
-                <h5 className='cart-product-title'>{product.name}</h5>
-                <h5 className='cart-product-price'>$ {product.price}</h5>
-                <button  onClick={() => handleClick(product.id)} className='remove-button'>-</button>
+              <div className="cart-item-box" key={key}>
+                <img className="product-image" src={product.photo} />
+                <h5 className="cart-product-title">{product.name}</h5>
+                <h5 className="cart-product-price">
+                  $ {parseFloat(product.price).toLocaleString("es-AR")}
+                </h5>
+                <button
+                  onClick={() => handleClick(product.id)}
+                  className="remove-button"
+                >
+                  -
+                </button>
               </div>
             ))}
-            <div className='d-flex justify-content-end mt-4 w-100'>
-              <Link className='buy-button' to='/checkout'>Comprar</Link>
+            <div className="d-flex justify-content-end mt-4 w-100">
+              <Link className="buy-button" to="/checkout">
+                Comprar
+              </Link>
             </div>
           </>
         ) : (
           <div className="cart-container">
-            <FontAwesomeIcon icon={faShoppingCart} />
+            <FontAwesomeIcon className="cart-icon" icon={faShoppingCart} />
             <p>Tu carrito está vacío</p>
           </div>
         )}
