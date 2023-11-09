@@ -88,7 +88,8 @@ const SearchBar = ({ show, handleClose }) => {
                   className="product-image"
                 />
               )}
-              {product.name}
+              <p className="searchbar-product-title">{product.name}</p>
+              <p>$ {parseFloat(product.price).toLocaleString("es-AR")}</p>
             </a>
           ))}
         </div>

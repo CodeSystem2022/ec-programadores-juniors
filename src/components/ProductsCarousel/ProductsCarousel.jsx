@@ -33,7 +33,7 @@ const ProductsCarousel = () => {
             <Carousel.Caption>
               <SimpleProduct
                 name={product.name}
-                price={product.price}
+                price={parseFloat(product.price).toLocaleString("es-AR")}
                 img={product.photo}
               />
             </Carousel.Caption>
