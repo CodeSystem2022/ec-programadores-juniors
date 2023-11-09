@@ -1,5 +1,5 @@
 .search-sidebar {
-  /* Estilo base */
+  position: fixed;
   height: 100px;
   width: 100% !important;
   align-items: center;
@@ -18,7 +18,6 @@
   justify-content: center;
   height: 35px;
   width: 350px;
-  margin-top: 5%;
 }
 
 .input-searchbar {
@@ -39,14 +38,9 @@
 .search-results {
   display: flex;
   flex-direction: column;
-  overflow-x: auto;
-  overflow-y: auto;
   gap: 60px;
   margin: auto;
-}
-
-.search-result-item p {
-  align-self: flex-start;
+  max-width: 800px;
 }
 
 .searchbar-product-title {
@@ -69,5 +63,9 @@
 @media screen and (min-width: 1024px) {
   .search-results {
     flex-direction: row;
+  }
+
+  .search-result-item p {
+    align-self: flex-start;
   }
 }
