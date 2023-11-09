@@ -155,9 +155,9 @@ const NavbarComponent = () => {
                     Ver Todo
                   </NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link className="nav-link" href="/accesorios">
+                {/* <Nav.Link className="nav-link" href="/accesorios">
                   Accesorios
-                </Nav.Link>
+                </Nav.Link> */}
                 {isUserLoggedIn ? (
                   <>
                     <Nav.Link className="nav-link" href="/account">
