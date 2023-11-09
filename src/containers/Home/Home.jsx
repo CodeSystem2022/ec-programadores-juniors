@@ -49,7 +49,6 @@ const Home = () => {
           </h2>
           <p className="section-text">Lo mejor del calzado e indumentaria</p>
         </div>
-     
       </section>
 
       <section className="genders-section">
@@ -57,7 +56,7 @@ const Home = () => {
           <h4 className="gender-title">Mujer</h4>
           <div className="d-flex flex-column  justify-content-center align-items-center">
             <img className="gender-img" src="./img/women.jpeg" alt="mujer" />
-            <Link className="gender-link" to={"/"}>
+            <Link className="gender-link" to={"/products/mujer"}>
               Comprar
             </Link>
           </div>
@@ -66,7 +65,7 @@ const Home = () => {
           <h4 className="gender-title">Hombre</h4>
           <div className="d-flex flex-column  justify-content-center align-items-center">
             <img className="gender-img" src="./img/men.jpeg" alt="hombre" />
-            <Link className="gender-link" to={"/"}>
+            <Link className="gender-link" to={"/products/hombre"}>
               Comprar
             </Link>
           </div>
@@ -75,7 +74,7 @@ const Home = () => {
           <h4 className="gender-title">Niño/a</h4>
           <div className="d-flex flex-column  justify-content-center align-items-center">
             <img className="gender-img" src="./img/children.png" alt="niño/a" />
-            <Link className="gender-link" to={"/"}>
+            <Link className="gender-link" to={"/products/niño"}>
               Comprar
             </Link>
           </div>
