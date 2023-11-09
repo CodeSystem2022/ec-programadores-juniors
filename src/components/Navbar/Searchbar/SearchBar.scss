@@ -45,6 +45,14 @@
   margin: auto;
 }
 
+.search-result-item p {
+  align-self: flex-start;
+}
+
+.searchbar-product-title {
+  font-weight: bold;
+}
+
 .search-result-item {
   padding: 20px 0;
   display: flex;

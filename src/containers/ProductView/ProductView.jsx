@@ -16,7 +16,6 @@ const ProductView = () => {
 
   const [selectedSize, setSelectedSize] = useState([]);
 
-
   useEffect(() => {
     Axios.get(`${import.meta.env.VITE_APP_HOST}/product/product/${id}`).then(
       (response) => {
@@ -36,7 +35,6 @@ const ProductView = () => {
     }
   };
 
-
   // console.log(selectedSize);
 
   return (
@@ -44,7 +42,10 @@ const ProductView = () => {
       <div className="product-container">
         <img className="product-img" src={product?.photo} alt="product" />
         <h3 className="product-title">{product?.name}</h3>
-        <p className="product-price">$ {product?.price}</p>
+        <p className="product-price">
+          $ {parseFloat(product?.price).toLocaleString("es-AR")}
+        </p>
+
         <p className="size-title">Seleccionar talle(US)</p>
         <div className="size">
           {product != null ? (
@@ -72,7 +73,9 @@ const ProductView = () => {
           }/payment/create-checkout-session`}
           method="POST"
         >
-          <button className="add-button" type="submit">Comprar ahora</button>
+          <button className="add-button" type="submit">
+            Comprar ahora
+          </button>
         </form>
 
         <h5>Descripción</h5>
