@@ -18,7 +18,7 @@ const Products = () => {
           `${import.meta.env.VITE_APP_HOST}/category/gender/${gender}`
         );
         // console.log(response.data.products);
-        setProducts(response.data.products);
+        setProducts(response.data);
       } catch (error) {
         console.log(error);
       }

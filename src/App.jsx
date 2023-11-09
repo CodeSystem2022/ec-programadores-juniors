@@ -61,7 +61,7 @@ function App() {
         <Route path="/help" element={<Help />} />
 
         {/* Vista cards de productos*/}
-         <Route path="products/:gender" element={<Products />} /> 
+         <Route path="/products/:gender" element={<Products />} /> 
         
           {/* Vista cards de productos */}
         <Route path="/products/:gender/:category" element={<ProductsByGender />} />
