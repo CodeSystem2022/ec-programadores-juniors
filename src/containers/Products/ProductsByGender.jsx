@@ -30,7 +30,7 @@ const ProductsByGender = () => {
 
     return (
         <FullWidthLayout>
-            <Options />
+            {/* <Options /> */}
             {products != null ? (
                 <div className="container">
                     <div className="row">
