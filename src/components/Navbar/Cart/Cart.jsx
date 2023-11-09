@@ -30,7 +30,7 @@ const SearchBar = ({ show, handleClose }) => {
           padding: "5% 5% 0 5%",
         }}
       >
-        <Offcanvas.Title>MI COMPRA</Offcanvas.Title>
+        <Offcanvas.Title className="cart-title">MI COMPRA</Offcanvas.Title>
       </Offcanvas.Header>
       <hr
         style={{
