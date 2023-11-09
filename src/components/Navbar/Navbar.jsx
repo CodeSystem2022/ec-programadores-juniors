@@ -100,7 +100,7 @@ const NavbarComponent = () => {
                   </NavDropdown.Item>
                   <NavDropdown.Item
                     className="view-all navDropdown"
-                    href="/mujer"
+                    href="/products/mujer"
                   >
                     Ver Todo
                   </NavDropdown.Item>
@@ -125,7 +125,7 @@ const NavbarComponent = () => {
                   </NavDropdown.Item>
                   <NavDropdown.Item
                     className="view-all navDropdown"
-                    href="/hombre"
+                    href="/products/hombre"
                   >
                     Ver Todo
                   </NavDropdown.Item>
@@ -150,7 +150,7 @@ const NavbarComponent = () => {
                   </NavDropdown.Item>
                   <NavDropdown.Item
                     className="view-all navDropdown"
-                    href="/niño"
+                    href="/products/niño"
                   >
                     Ver Todo
                   </NavDropdown.Item>
